@@ -1,0 +1,30 @@
+<view id="messageHeader"><label>暂无新消息</label></view>
+<view id="messageIndex">
+  <view class="messageIndex"><image src="images/Courier.png"></image><label>快递</label></view>
+  <view class="messageIndex"><image src="images/Notice.png"></image><label>通知</label></view>
+  <view class="messageIndex"><image src="images/Interactive.png"></image><label>互动</label></view>
+</view>
+<view id="messageContent">
+  <view class="messageDialog" bindtap='intoDialog'><image src="images/Sculpture.jpg"></image>
+    <view class="dialog">
+      <view class="dialogHeader">
+        <label class="dialogName">Sora.</label>
+        <label class="dialogTime">14:33</label>
+      </view>
+      <view class="dialogContent">
+        <label class="dialogContent">你好啊！</label>
+      </view>
+    </view>
+  </view>
+  <view class="messageDialog"><image src="images/Sculpture2.jpg"></image>
+    <view class="dialog">
+      <view class="dialogHeader">
+        <label class="dialogName">洋葱小鱿</label>
+        <label class="dialogTime">15:52</label>
+      </view>
+      <view class="dialogContent">
+        <label class="dialogContent">你好，欢迎来到校园社区，祝你使用愉快！</label>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,48 @@
+page{
+  background-color: rgb(240, 240, 240);
+}
+#content{
+  margin-top: 40rpx;
+}
+.message{
+  margin: 30rpx auto;
+  border: 2.34rpx solid rgb(230, 230, 230);
+  background-color: white;
+}
+.message_left{
+  width: 620rpx;
+  padding: 10rpx 0rpx 10rpx 30rpx;
+  display: inline-block;
+}
+.message_right{
+  width: 70rpx;
+  padding: 10rpx 0rpx 10rpx 0rpx;
+  margin: auto 0rpx;
+  display: inline-block;
+  position: relative;
+  top: 10rpx;
+}
+.messageHeader{
+  width: 620rpx;
+  padding: 10rpx 0rpx;
+}
+.messageName{
+  font-size: 45rpx;
+}
+.messageType{
+  width: 620rpx;
+  padding: 10rpx 0rpx 10rpx 0rpx;
+  color:rgb(150, 150, 150);
+  font-size: 35rpx;
+  overflow: hidden;
+}
+.messageType>label{
+  width: 620rpx;
+}
+.messageImg{
+  width: 70rpx;
+  height: 70rpx;
+}
+.button_hover{
+  background-color:rgb(200,200,200);
+}

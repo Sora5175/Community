@@ -1,0 +1,10 @@
+<scroll-view id="register">
+  <view class="info"><label>学号：</label><input maxlength='15' bindinput='userIdInput'></input></view>
+  <view class="info"><label>姓名：</label><input maxlength='10' bindinput='userNameInput'></input></view>
+  <view class="info"><label>性别：</label><picker range='{{sexRange}}' value="{{sexIndex}}" bindchange='sexChange'>{{sexRange[sexIndex]}}</picker><image src="images/Into.png"></image></view>
+  <view class="info"><label>学校：</label><picker range='{{schoolRange}}' value="{{schoolIndex}}" bindchange='schoolChange' range-key="{{'schoolName'}}">{{schoolRange[schoolIndex].schoolName}}</picker><image src="images/Into.png"></image></view>
+  <view class="info"><label>院系：</label><picker range='{{departmentRange}}' value="{{departmentIndex}}" bindchange='departmentChange' range-key="{{'departmentName'}}">{{departmentRange[departmentIndex].departmentName}}</picker><image src="images/Into.png"></image></view>
+  <view class="info"><label>年级：</label><picker range='{{gradeRange}}' value="{{gradeIndex}}" bindchange='gradeChange' range-key="{{'gradeName'}}">{{gradeRange[gradeIndex].gradeName}}</picker><image src="images/Into.png"></image></view>
+  <view class="info"><label>班级：</label><picker range='{{classRange}}' value="{{classIndex}}" bindchange='classChange' range-key="{{'className'}}">{{classRange[classIndex].className}}</picker><image src="images/Into.png"></image></view>
+<button bindtap='registerAction'>确认注册</button>
+</scroll-view>

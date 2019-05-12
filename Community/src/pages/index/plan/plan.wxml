@@ -1,0 +1,21 @@
+<view class="top">
+ <view class="yue">10月</view>
+  <view wx:for="{{['周 一 15日','周 二 16日','周 三 17日','周 四 18日','周 五 19日','周 六 20日','周 日  21日']}}" class="top-text" wx:key="item">{{item}}</view>
+</view>
+<view  class="scroll">
+  <view style="height:1200rpx;width:730rpx;display:flex;">
+    <view>
+      <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}"  wx:key="item" class="left">
+        {{item}}
+      </view>
+    </view>
+    <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}"  wx:key="item">
+      
+    </view>
+    <view wx:for="{{wlist}}"  wx:key="item">
+      <view class="flex-item kcb-item" bindtap="showCardView" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.xqj-1)*100}}rpx;margin-top:{{(item.skjc-1)*100+5}}rpx;height:{{item.skcd*100-5}}rpx;background-color:{{colorArrays[index%9]}}">
+        <view class="smalltext" >{{item.kcmc}}</view>
+      </view>
+    </view>
+  </view>
+</view>

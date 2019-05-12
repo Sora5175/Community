@@ -1,0 +1,24 @@
+<scroll-view id="content">
+<view class="roleLabel">正选人员</view>
+<block wx:for="{{memberList}}" wx:key="item">
+      <view class="message" bindtap="intoMemberInfo" data-temp="?gId={{gId}}&name={{name}}&cId={{CVSList[index].cId}}&userId={{item.userId}}&userName={{item.name}}&userSex={{item.sex}}&userSchoolId={{item.schoolId}}&userDepartmentId={{item.departmentId}}&userGradeId={{item.gradeId}}&userClassId={{item.classId}}&isAlternate=0&publisherId={{publisherId}}" hover-class='button_hover'>
+      <view class="message_left">
+        <view class="messageHeader"><label class="messageName">{{item.name}}</label></view>
+      </view>
+      <view class="message_right">
+        <image class="messageImg" src="images/Into.png"></image>
+      </view>
+    </view>
+</block>
+<view class="roleLabel">候补人员</view>
+<block wx:for="{{alternateMemberList}}" wx:key="item">
+      <view class="message" bindtap="intoMemberInfo" data-temp="?gId={{gId}}&name={{name}}&cId={{CVSList[index].cId}}&userId={{item.userId}}&userName={{item.name}}&userSex={{item.sex}}&userSchoolId={{item.schoolId}}&userDepartmentId={{item.departmentId}}&userGradeId={{item.gradeId}}&userClassId={{item.classId}}&isAlternate=1&publisherId={{publisherId}}" hover-class='button_hover'>
+      <view class="message_left">
+        <view class="messageHeader"><label class="messageName">{{item.name}}</label></view>
+      </view>
+      <view class="message_right">
+        <image class="messageImg" src="images/Into.png"></image>
+      </view>
+    </view>
+</block>
+</scroll-view>

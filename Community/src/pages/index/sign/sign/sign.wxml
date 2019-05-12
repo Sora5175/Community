@@ -1,0 +1,9 @@
+<view id="check" class="check" hover-class='check_hover' bindtap='cameraSign'><image src="images/check.png"></image><label>扫描签到</label></view>
+<view id="content">
+  <view class="headerInfo">
+    <image src="images/Sculpture.jpg"></image><label>Sora.</label>
+  </view>
+  <view class="centerInfo">
+    <image src="http://101.132.147.21:8080/Community/wx-user/qrCode?uId=000001&planId=00001"></image><label>二维码每分钟自动刷新，并且短期有效</label>
+  </view>
+</view>

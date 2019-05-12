@@ -1,0 +1,41 @@
+<swiper autoplay='true' circular="true" indicator-dots='true' indicator-active-color="rgba(255,255,255,0.5)">
+    <block wx:for="{{imgUrls}}" wx:key="item">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+</swiper>
+<view id="index">
+ <view class='index' bindtap='intoSign'>
+    <image src="images/Sign.png"></image><text>\n</text>
+    <label>即时签到</label>
+  </view>
+  <view class='index'  bindtap='intoPlan'>
+    <image src="images/Schedule.png"></image><text>\n</text>
+    <label>我的行程</label>
+  </view>
+  <view class='index' bindtap='intoActivity'>
+    <image src="images/Activity.png"></image><text>\n</text>
+    <label>活动中心</label>
+  </view>
+  <view class='index' bindtap='intoCompetition'>
+    <image src="images/Competition.png"></image><text>\n</text>
+    <label>校园竞赛</label>
+  </view>
+</view>
+<view id="content">
+  <view class="message">
+    <view  class="messageTime"><label>11:22</label></view>
+    <view class="messageView">
+      <view class="messageHeader"><label>课堂通知！</label></view>
+      <view class="messageContent"><label>web开发课程设计在信息楼A106上机！</label></view>
+    </view>
+  </view>
+  <view class="message">
+    <view  class="messageTime"><label>06:54</label></view>
+      <view class="messageView">
+        <view class="messageHeader"><label>选课通知！</label></view>
+        <view class="messageContent"><label>大学生外语教程第二课堂积分已开始接受申请，截止10月22日，请及时在英语教学网提交申请！</label></view>
+      </view>
+  </view>
+</view>

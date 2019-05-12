@@ -1,0 +1,70 @@
+page{
+  background-color: rgb(240, 240, 240);
+}
+view{
+  background-color: white;
+  width: 100%;
+}
+#header{
+  width: 200rpx;
+  height: 280rpx;
+  background-color: rgb(255, 127, 0);
+  padding: 50rpx 275rpx ;
+  text-align: center;
+}
+#sculpture{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 100%;
+}
+.info{
+  width: 720rpx;
+  padding: 25rpx 5rpx 25rpx 25rpx;
+  border-bottom: 2.34rpx solid rgb(240, 240, 240);
+}
+.info>image{
+  width: 45rpx;
+  height: 45rpx;
+  float: right;
+  position: relative;
+  top:5rpx;
+}
+.info>label{
+  width: 115rpx;
+  height: 50rpx;
+  position: relative;
+  bottom: 8rpx;
+}
+input{
+  display: inline-block;
+  width: 560rpx;
+  height: 50rpx;
+  text-align: right;
+  color: rgb(150, 150, 150);
+}
+picker{
+  display: inline-block;
+  width: 560rpx;
+  height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+  color: rgb(150, 150, 150);
+}
+#CVAction{
+  bottom:0px;
+  position: fixed;
+}
+#CVAccept{
+  background-color:#04dc27;
+  margin: auto 10rpx;
+}
+#CVReject{
+  background-color: red;
+  margin: auto 0rpx;
+}
+button{
+  width: 360rpx;
+  color: white;
+  display: inline-block;
+}

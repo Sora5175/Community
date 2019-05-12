@@ -1,0 +1,70 @@
+page{
+  background-color: rgb(50, 50, 50);
+}
+view{
+  background-color: white;
+  width: 100%;
+}
+#check{
+  width: 200rpx;
+  color: white;
+  border-radius: 30rpx;
+  padding: 20rpx 20rpx 0rpx 20rpx;
+  margin:25rpx auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+#check>label{
+  font-size: 25rpx;
+  line-height: 25rpx;
+}
+#check>image{
+  width: 45rpx;
+  height: 45rpx;
+  position: relative;
+  bottom: 10rpx;
+  margin-right: 15rpx;
+}
+.check{
+  background: rgba(150, 150, 150, 0.6);
+}
+.check_hover{
+  background-color: rgba(100, 100, 100, 0.9);
+}
+#content{
+  width: 600rpx;
+  padding: 20rpx 0rpx;
+  margin: 75rpx;
+  border-radius: 30rpx;
+}
+.headerInfo{
+  width: 540rpx;
+  height: 145rpx;
+  line-height: 155rpx;
+  font-size: 40rpx;
+  margin:0rpx 30rpx;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  display:flex;
+}
+.headerInfo>image{
+  width: 105rpx;
+  height: 105rpx;
+  margin: 30rpx 45rpx 0rpx 40rpx;
+}
+.centerInfo{
+  width: 540rpx;
+  margin: 0rpx 30rpx 30rpx 30rpx;
+  text-align: center;
+}
+.centerInfo>image{
+  width: 480rpx;
+  height: 480rpx;
+  margin: 10rpx 30rpx 0rpx 30rpx;
+}
+.centerInfo>label{
+  font-size: 30rpx;
+  width: 540rpx;
+  color: rgb(150, 150, 150)
+}

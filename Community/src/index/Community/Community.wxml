@@ -1,0 +1,37 @@
+<view id="communityIndex">
+  <view class="communityIndex"><image src="images/Lost.png"></image><label>失物招领</label></view>
+  <view class="communityIndex"><image src="images/Search.png" bindtap='intoCheck'></image><label>事务查询</label></view>
+  <view class="communityIndex" bindtap='intoPosts'><image src="images/Post.png"></image><label>社区贴吧</label></view>
+  <view class="communityIndex" bindtap='intoKnowledge'><image src="images/Knowledge.png"></image><label>璞玉广场</label></view>
+</view>
+<view id="NoticeIndex" class="NoticeIndex" hover-class='NoticeIndex_hover'><label id="Notice">1 条新消息</label><image src="images/Into.png"></image></view>
+<view id="content">
+  <view class="message">
+    <view class="messageHeader"><image src="images/Sculpture.jpg"></image><label class="messageName">Sora.</label><label class="messageTime">1 小时前</label></view>
+    <view class="messageContent">
+      <label>本人与上午11点左右在经管楼附近丢了钥匙一串，麻烦捡到的同学告知一声啊qwq</label>
+      <view class="messageImg"><image mode='widthFix' src="images/1.jpg"></image></view>
+      <view class="messageType"><label>#失物招领</label></view>
+    </view>
+    <view class="messageFooter">
+      <view class="messageAction">
+        <image src="images/Comments.png"></image><label>14</label>
+      </view>
+    </view>
+  </view>
+  <view class="message">
+    <view class="messageHeader"><image src="images/Sculpture2.jpg"></image><label class="messageName">洋葱小鱿</label><label class="messageTime">3 小时前</label></view>
+    <view class="messageContent">
+      <label>去夫子庙玩了一趟，超好玩呀！！！！！</label>
+      <view class="messageImg"><image mode='widthFix' src="images/nanjing_fuzimiao.jpg"></image></view>
+      <view class="messageType"><label>#社区贴吧</label></view>
+    </view>
+    <view class="messageFooter">
+      <view class="messageAction">
+        <image src="images/Collect.png"></image><label>99</label>
+        <image src="images/Comments.png"></image><label>51</label>
+        <image src="images/Upvote.png"></image><label>112</label>
+      </view>
+    </view>
+  </view>
+</view> 

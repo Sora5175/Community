@@ -1,0 +1,15 @@
+<view id="header">
+  <view id="foundMember" hover-class='button_hover' bindtap='intoMyGroup'>我的团队</view>
+  <view id="foundTeam" hover-class='button_hover' bindtap='intoMySendedCV'>我发出的简历</view>
+</view>
+<scroll-view id="content">
+<block wx:for="{{groupList}}" wx:key="item">
+  <view class="message" bindtap="intoInfo" data-group="{{item}}" data-publisher="{{groupPublisher[index]}}" data-isSended="{{isSended[index]}}" hover-class='button_hover'>
+    <view class="messageHeader"><image src="images/Sculpture.jpg"></image><label class="messageName">{{groupPublisher[index].name}}</label></view>
+    <view class="messageContent">
+       <label>{{item.content}}</label>
+      <view class="messageType"><label class="name">#{{item.name}}</label><label class="type">#招人</label></view>
+    </view>
+  </view>
+</block>
+</scroll-view>

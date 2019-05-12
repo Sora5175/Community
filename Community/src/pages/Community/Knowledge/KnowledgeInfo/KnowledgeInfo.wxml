@@ -1,0 +1,11 @@
+<view id="header">
+</view>
+<scroll-view id="body">
+  <view class="info"><label>名<text  decode="{{true}}">&emsp;&emsp;</text>称：</label><input type='text' maxlength='10' value='{{group.name}}' disabled='disabled'></input></view>
+  <view class="info"><label>需<text  decode="{{true}}">&emsp;&emsp;</text>求：</label><textarea type='text' value='{{group.content}}' disabled='disabled'></textarea> </view>
+  <view class="info"><label>队<text  decode="{{true}}">&emsp;&emsp;</text>长：</label><input type='text' maxlength='10' value='{{publisherName}}' disabled='disabled'></input></view>
+</scroll-view>
+<view id="updateAction">
+  <button  id="confirmCV" bindtap='confirmCV' wx:if="{{!isSended}}">投递简历</button>
+  <button  id="isSended" disabled='disabled' wx:else>已投递简历</button>
+</view>

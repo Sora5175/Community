@@ -1,0 +1,15 @@
+<view id="header">
+  <image id="sculpture" src="images/Sculpture.jpg"></image>
+</view>
+<scroll-view id="body">
+  <view class="info"><label>姓名：</label><input maxlength='10' bindinput='userNameInput' value='{{userName}}' disabled='disabled'></input></view>
+  <view class="info"><label>性别：</label><picker range='{{sexRange}}' value="{{sexIndex}}" bindchange='sexChange' disabled='disabled'>{{sexRange[sexIndex]}}</picker></view>
+  <view class="info"><label>学校：</label><picker range='{{schoolRange}}' value="{{schoolIndex}}" bindchange='schoolChange' range-key="{{'schoolName'}}" disabled='disabled'>{{schoolRange[schoolIndex].schoolName}}</picker></view>
+  <view class="info"><label>院系：</label><picker range='{{departmentRange}}' value="{{departmentIndex}}" bindchange='departmentChange' range-key="{{'departmentName'}}" disabled='disabled'>{{departmentRange[departmentIndex].departmentName}}</picker></view>
+  <view class="info"><label>年级：</label><picker range='{{gradeRange}}' value="{{gradeIndex}}" bindchange='gradeChange' range-key="{{'gradeName'}}" disabled='disabled'>{{gradeRange[gradeIndex].gradeName}}</picker></view>
+  <view class="info"><label>班级：</label><picker range='{{classRange}}' value="{{classIndex}}" bindchange='classChange' range-key="{{'className'}}" disabled='disabled'>{{classRange[classIndex].className}}</picker></view>
+</scroll-view>
+<view id="CVAction">
+  <button  id="CVAccept" bindtap='CVAccept'>同意</button>
+  <button  id="CVReject" bindtap='CVReject'>拒绝</button>
+</view>

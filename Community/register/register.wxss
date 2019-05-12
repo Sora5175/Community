@@ -1,0 +1,62 @@
+page{
+  background-color: rgb(240, 240, 240);
+}
+view{
+  background-color: white;
+  width: 100%;
+}
+#register{
+  position:relative;
+  padding: 35rpx 0rpx;
+}
+.info{
+  width: 720rpx;
+  padding: 25rpx 5rpx 25rpx 25rpx;
+  border-bottom: 2.34rpx solid rgb(240, 240, 240);
+}
+.info>image{
+  width: 45rpx;
+  height: 45rpx;
+  float: right;
+  position: relative;
+  top:5rpx;
+}
+.info>label{
+  width: 115rpx;
+  height: 50rpx;
+  position: relative;
+  bottom: 8rpx;
+}
+input{
+  display: inline-block;
+  width: 560rpx;
+  height: 50rpx;
+  text-align: right;
+  color: rgb(150, 150, 150);
+}
+.mineInfo{
+  display: inline-block;
+  width: 560rpx;
+  height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+  color: rgb(150, 150, 150);
+}
+picker{
+  display: inline-block;
+  width: 560rpx;
+  height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+  color: rgb(150, 150, 150);
+}
+#registerAction{
+  bottom:0px;
+  position: fixed;
+}
+button{
+  background-color: red;
+  color: white;
+}

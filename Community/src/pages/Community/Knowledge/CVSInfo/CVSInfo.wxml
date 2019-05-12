@@ -1,0 +1,12 @@
+<scroll-view id="content">
+<block wx:for="{{userInfoList}}" wx:key="item">
+      <view class="message" bindtap="intoCVInfo" data-temp="?gId={{gId}}&name={{name}}&cId={{CVSList[index].cId}}&userId={{item.userId}}&userName={{item.name}}&userSex={{item.sex}}&userSchoolId={{item.schoolId}}&userDepartmentId={{item.departmentId}}&userGradeId={{item.gradeId}}&userClassId={{item.classId}}" hover-class='button_hover'>
+      <view class="message_left">
+        <view class="messageHeader"><label class="messageName">{{item.name}}</label></view>
+      </view>
+      <view class="message_right">
+        <image class="messageImg" src="images/Into.png"></image>
+      </view>
+    </view>
+</block>
+</scroll-view>

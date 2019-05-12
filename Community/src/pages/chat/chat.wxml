@@ -1,0 +1,12 @@
+<view id="content">
+  <view class="message">
+    <view  class="messageTime"><label>14:33</label></view>
+    <view class="messageView  oppsite">
+      <image src="images/Sculpture.jpg"></image><label>你好啊！</label>
+    </view>
+  </view>
+</view>
+<view id="bottomTab">
+  <textarea id="messageInput"/>
+  <button id="send">发送</button>
+</view>

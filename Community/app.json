@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "src/index/Index/Index",
+    "src/index/Question/Question",
+    "src/index/Message/Message",
+    "src/index/Community/Community",
+    "src/index/Mine/Mine",
+    "register/register",
+    "src/pages/index/sign/sign/sign",
+    "src/pages/index/plan/plan",
+    "src/pages/index/activity/activity",
+    "src/pages/index/sign/signCode/signCode",
+    "src/pages/index/competition/competition",
+    "src/pages/chat/chat",
+    "src/pages/Community/Posts/Posts",
+    "src/pages/Community/Check/check",
+    "src/pages/Mine/MineInfo/mineInfo",
+    "src/pages/Community/Knowledge/Knowledge/Knowledge",
+    "src/pages/Community/Knowledge/KnowledgeInfo/KnowledgeInfo",
+    "src/pages/Community/Knowledge/MyGroup/MyGroup",
+    "src/pages/Community/Knowledge/Hired/Hired",
+    "src/pages/Community/Knowledge/MyReceivedCV/MyReceivedCV",
+    "src/pages/Community/Knowledge/Hiring/Hiring",
+    "src/pages/Community/Knowledge/CVSInfo/CVSInfo",
+    "src/pages/Community/Knowledge/MySendedCV/MySendedCV",
+    "src/pages/Community/Knowledge/CVInfo/CVInfo",
+    "src/pages/Community/Knowledge/GroupInfo/GroupInfo",
+    "src/pages/Community/Knowledge/GroupManagement/GroupManagement",
+    "src/pages/Community/Knowledge/MemberInfo/MemberInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "rgb(150, 132, 132)",
+    "selectedColor": "rgb(255, 127, 0)",
+    "backgroundColor": "white",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/Home_choosed.png",
+        "iconPath": "images/Home.png",
+        "pagePath": "src/index/Index/Index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/Question_choosed.png",
+        "iconPath": "images/Question.png",
+        "pagePath": "src/index/Question/Question",
+        "text": "校园问答"
+      },
+      {
+        "selectedIconPath": "images/Message_choosed.png",
+        "iconPath": "images/Message.png",
+        "pagePath": "src/index/Message/Message",
+        "text": "消息"
+      },
+      {
+        "selectedIconPath": "images/Community_choosed.png",
+        "iconPath": "images/Community.png",
+        "pagePath": "src/index/Community/Community",
+        "text": "社区生活"
+      },
+      {
+        "selectedIconPath": "images/User_choosed.png",
+        "iconPath": "images/User.png",
+        "pagePath": "src/index/Mine/Mine",
+        "text": "我的"
+      }
+    ]
+  }
+}

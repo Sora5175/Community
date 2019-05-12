@@ -1,0 +1,15 @@
+<view id="content">
+<block wx:for="{{groupList}}" wx:key="item">
+      <view class="message" bindtap="intoCVSInfo" data-temp="?gId={{item.gId}}&name={{item.name}}" hover-class='button_hover'>
+      <view class="message_left">
+        <view class="messageHeader"><label class="messageName">{{item.name}}</label></view>
+        <view class="messageType">
+          <label>{{CVNumber[index]}}条未处理简历</label>
+        </view>
+      </view>
+      <view class="message_right">
+        <image class="messageImg" src="images/Into.png"></image>
+      </view>
+    </view>
+</block>
+</view>

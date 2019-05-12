@@ -1,0 +1,17 @@
+<view id="header">
+  <image id="sculpture" src="images/Sculpture.jpg"></image>
+</view>
+<scroll-view id="body">
+  <view class="info"><label>姓名：</label><input maxlength='10' bindinput='userNameInput' value='{{userName}}' disabled='disabled'></input></view>
+  <view class="info"><label>性别：</label><picker range='{{sexRange}}' value="{{sexIndex}}" bindchange='sexChange' disabled='disabled'>{{sexRange[sexIndex]}}</picker></view>
+  <view class="info"><label>学校：</label><picker range='{{schoolRange}}' value="{{schoolIndex}}" bindchange='schoolChange' range-key="{{'schoolName'}}" disabled='disabled'>{{schoolRange[schoolIndex].schoolName}}</picker></view>
+  <view class="info"><label>院系：</label><picker range='{{departmentRange}}' value="{{departmentIndex}}" bindchange='departmentChange' range-key="{{'departmentName'}}" disabled='disabled'>{{departmentRange[departmentIndex].departmentName}}</picker></view>
+  <view class="info"><label>年级：</label><picker range='{{gradeRange}}' value="{{gradeIndex}}" bindchange='gradeChange' range-key="{{'gradeName'}}" disabled='disabled'>{{gradeRange[gradeIndex].gradeName}}</picker></view>
+  <view class="info"><label>班级：</label><picker range='{{classRange}}' value="{{classIndex}}" bindchange='classChange' range-key="{{'className'}}" disabled='disabled'>{{classRange[classIndex].className}}</picker></view>
+</scroll-view>
+<view id="MemberAction">
+  <button  id="disabled" wx:if="{{publisherId==userId}}" disabled='true'></button>
+  <button  id="MemberUp" bindtap='MemberUp' wx:elif="{{isAlternate==1}}">升为正选</button>
+  <button  id="MemberDown" bindtap='MemberDown' wx:else>降为候选</button>
+  <button  id="MemberRemove" bindtap='MemberRemove'wx:if="{{publisherId!=userId}}">移出团队</button>
+</view>

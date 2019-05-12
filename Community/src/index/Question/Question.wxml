@@ -1,0 +1,21 @@
+<view id="checkView">
+  <view id="checkIndex">
+    <image src="images/Search.png"></image>
+    <input id="questionInput" placeholder='在这里输入问题'></input>
+    <label>|</label>
+    <image src="images/Edit.png"></image>
+    <label>提问</label>
+  </view>
+</view>
+<view id="content">
+    <view class="message">
+    <view class="messageHeader"><label>关于学校留校的疑问</label><button class="notFocused">关注</button></view>
+    <view class="messageContent"><label>暑假留校需要准备哪些材料，以及一些相应的准备，留校会有哪些不方便的地方？</label></view>
+    <view class="messageFooter"><label>47 关注</label></view>
+  </view>
+    <view class="message">
+    <view class="messageHeader"><label>计算机组成与结构3.7！！！</label><button class="isFocused">已关注</button></view>
+    <view class="messageContent"><image src="images/question.jpg" mode="widthFix"></image><label>这边 x/2 和 2x 不会求啊，等一个大佬！</label></view>
+    <view class="messageFooter"><label>56 关注</label></view>
+  </view>
+</view>

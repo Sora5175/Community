@@ -1,0 +1,84 @@
+page{
+  background-color: rgb(235, 235, 235);
+}
+#content{
+  padding: 35rpx 0rpx;
+  border-top: 1rpx solid #E6E6E6;
+}
+.message{
+  background-color: rgba(0, 0, 0, 0);
+  width: 740rpx;
+  padding: 0rpx 5rpx;
+  margin: 0rpx auto;
+  display: inlinblock;
+}
+.messageTime{
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+.messageTime>label{
+  width: auto;
+  font-size: 25rpx;
+  color: rgb(90,90,90);
+  border-radius: 15rpx;
+  padding: 10rpx 20rpx 10rpx 20rpx;
+  margin: 0 auto;
+}
+.messageView{
+  margin-top: 10rpx;
+  padding: 10rpx 0rpx;
+  line-height: 60rpx;
+  display: flex;
+}
+.messageView>image{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 100%;
+  margin:0rpx 25rpx;
+}
+.messageView>label{
+  background-color: rgb(255, 255, 255);
+  font-size: 30rpx;
+  padding: 15rpx 0rpx 0rpx 20rpx;
+  border-radius: 15rpx;
+  max-width: 400rpx;
+  word-break:break-all; 
+  display: inline-block;
+}
+.opposite{
+  flex-direction: row;
+}
+.mine{
+  flex-direction: row-reverse;
+}
+#bottomTab{
+  background-color: rgb(242, 242, 242);
+  width: 700rpx;
+  padding: 20rpx 25rpx;
+  position: fixed;
+  bottom: 0rpx;
+  border-top: 1rpx solid #E6E6E6;
+}
+#messageInput{
+  background-color: rgb(255, 255, 255);
+  font-size: 30rpx;
+  width: 530rpx;
+  height: 50rpx;
+  padding: 10rpx 20rpx;
+  line-height: 50rpx;
+  margin-right: 30rpx;
+  border-radius: 30rpx;
+  display: inline-block;
+}
+#send{
+  background-color: rgb(255, 127, 0);
+  color: white;
+  text-align: center;
+  width: 100rpx;
+  height: 70rpx;
+  font-size:30rpx;
+  line-height: 70rpx;
+  padding: 0rpx;
+  border-radius: 10rpx;
+  display: inline-block;
+}

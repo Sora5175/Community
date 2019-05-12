@@ -1,0 +1,11 @@
+<view id="header">
+</view>
+<scroll-view id="body">
+  <view class="info"><label>名<text  decode="{{true}}">&emsp;&emsp;</text>称：</label><input type='text' maxlength='10' bindinput='groupNameInput' value='{{groupName}}' focus='true'></input></view>
+  <view class="info"><label>需<text  decode="{{true}}">&emsp;&emsp;</text>求：</label><textarea type='text' bindinput='groupContentInput' value='{{groupContent}}'></textarea> </view>
+  <view class="info"><label>需要人数：</label><input type='number' maxlength='10' bindinput='needNumberInput' value='{{needNumber}}'></input></view>
+  <view class="info"><label>候补人数：</label><input type='number' maxlength='10' bindinput='alternateNumberInput' value='{{alternateNumber}}'></input></view>
+</scroll-view>
+<view id="updateAction">
+  <button  bindtap='confirmHiring'>发布招人</button>
+</view>

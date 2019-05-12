@@ -1,0 +1,14 @@
+<view id="checkIndex">
+      <picker range='{{kindRange}}' value="{{kindIndex}}" bindchange='kindChange'>{{kindRange[kindIndex]}}</picker>
+  <picker range='{{areaRange}}' value="{{areaIndex}}" bindchange='areaChange'>{{areaRange[areaIndex]}}</picker>
+</view>
+<view id="content">
+  <view class="activity">
+      <view class="activityHeader"><label class="name">南京工程学院2018年迎新晚会</label></view>
+      <view class="activityFooter"><label class="signUpTime">报名时间：10-06 00:00 ~ 10-10 24:00</label><label class="activityTime">活动时间：10-15 18:00 ~ 10-15 20:30</label><label class="location">活动地点：北大活</label></view>
+  </view>
+  <view class="activity">
+    <view class="activityHeader"><label class="name">计算机院期中动员大会</label></view>
+    <view class="activityFooter"><label class="signUpTime">报名时间：11-06 00:00 ~ 11-15 24:00</label><label class="activityTime">活动时间：11-20 09:00 ~ 11-20 11:00</label><label class="location">活动地点：图书馆A201</label></view>
+  </view>
+</view>

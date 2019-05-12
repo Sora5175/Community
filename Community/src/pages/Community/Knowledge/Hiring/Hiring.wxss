@@ -1,0 +1,48 @@
+page{
+  background-color: rgb(240, 240, 240);
+}
+view{
+  background-color: white;
+  width: 100%;
+}
+#header{
+  width: 200rpx;
+  height: 280rpx;
+  background-color: rgb(255, 127, 0);
+  padding: 50rpx 275rpx ;
+  text-align: center;
+}
+.info{
+  width: 720rpx;
+  padding: 25rpx 5rpx 25rpx 25rpx;
+  border-bottom: 2.34rpx solid rgb(240, 240, 240);
+}
+.info>label{
+  width: 200rpx;
+  height: 50rpx;
+  position: relative;
+  bottom: 8rpx;
+  float: left;
+}
+input{
+  display: inline-block;
+  width: 520rpx;
+  height: 50rpx;
+  text-align: right;
+  color: rgb(150, 150, 150);
+}
+textarea{
+  display: inline-block;
+  width: 520rpx;
+  line-height: 50rpx;
+  text-align: right;
+  color: rgb(150, 150, 150);
+}
+#updateAction{
+  bottom:0px;
+  position: fixed;
+}
+button{
+  background-color: red;
+  color: white;
+}

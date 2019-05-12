@@ -1,0 +1,3 @@
+<!--Community/src/pages/Community/Check/check.wxml-->
+<input placeholder='准考证号'></input>
+<button>查询</button>
