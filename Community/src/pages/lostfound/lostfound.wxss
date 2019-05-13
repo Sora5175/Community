@@ -1,0 +1,252 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+page{
+  width: 100%;
+  height: 100%;
+}
+.top-tab{
+  width: 100%;
+  height: 105rpx;
+  background-color: #298de5;
+  color: #8ccefd;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  box-shadow: 0 2px 2px #bebebe;
+  margin: 0 0 1% 0;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  display: flex;
+}
+.active{
+  color: #ffffff;
+  border-bottom: solid 2px #ffffff;
+}
+.flex-item{
+  flex-grow: 1;
+  text-align: center;
+}
+.container{
+  height: 100%;
+  padding:0;
+  font-size:14rpx;
+  color:#000;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  box-sizing:border-box;
+  background:#F0F4F3;
+  margin:105rpx 0 0 0;
+}
+.feed-item{
+  width:690rpx;
+  padding:30rpx 30rpx 20rpx;
+  margin:7rpx 0 6rpx 0;
+  background:#ffffff;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  box-shadow:0 2px 5px #eeeeee
+}
+.feed-source{
+  width:230px;
+  height:80rpx;
+  display: inline-block;
+}
+.feed-source text{
+  display: inline-block;
+  height: 40rpx;
+  line-height: 40rpx;
+  vertical-align: middle;
+  margin: 0 0 0 15rpx;
+  color: #a0acac;
+  font-size: 26rpx;
+}
+.avatar{
+  position:relative;
+  display:inline-block;
+}
+.avatar>image{
+  display:inline-block;
+  width:80rpx;
+  height:80rpx;
+  border-radius:45rpx;
+  top:10rpx;
+  vertical-align:middle;
+  overflow:hidden;
+}
+.feed-content{
+  margin-top: 20rpx;
+  height: 100px;
+  display: flex;
+}
+.feed-content text{
+  width: 100%;
+  display: inline-block;
+  font-size: 38rpx;
+  font-weight: 600px;
+  line-height: 40rpx;
+  /* word-break: keep-all; */
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:4;
+  -webkit-box-orient:vertical;
+  max-height: 100px;
+}
+.lost-img{
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+}
+.lost-img>image{
+  width: 100px;
+  height: 100px;
+}
+.lost-discribe{
+  width: 245px;
+  height: 100px;
+  margin-left: 1%;
+}
+.time{
+  height: 34px;
+  /* display: inline-block; */
+  padding-left: 2px;
+  float: right;
+}
+.time text{
+  width: 100%;
+  height: 100%;
+  /* line-height: 34px; */
+  text-align: right;
+  margin: 0 0 0 15rpx;
+  color: #a0acac;
+  font-size: 20rpx;
+}
+#lostsend{
+  width: 100%;
+  height: 100%;
+}
+.lostsendcontainer{
+  /* height: 100%; */
+  width: 100%;
+  font-size: 14px;
+  background-color: #F0F4F3;
+}
+#lostsend input,#foundsend input{
+  /* border: 1px solid gray; */
+  border-radius: 4px;
+  margin-top: 5px;
+  padding-left: 2%;
+  background-color: white;
+  width: 98%;
+}
+#lostsend label,#foundsend label{
+  font-size: 18px;
+  /* color: whitesmoke; */
+}
+#lostsend textarea,#foundsend textarea{
+  width: 98%;
+  height: 130px;
+  line-height: 16px;
+  /* border: 1px solid gray; */
+  margin-top: 5px;
+  padding-left: 2%;
+  border-radius: 4px;
+  background-color: white;
+}
+#lostsend button,#foundsend button{
+  margin-top: 5px;
+  border-radius: 0px;
+}
+#lostsend image,#foundsend image{
+  /* border: 1px solid gray; */
+  margin-top: 5px;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+#lostsend picker,#foundsend picker{
+  height: 24px;
+  /* border: 1px solid gray; */
+  border-radius: 4px;
+  margin-top: 5px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+  background-color: white;
+}
+.myinfo_container{
+  width: 100%;
+  height: 100%;
+}
+.myinfo_container>label{
+  height: 10%;
+  width: 100%;
+  display: inline-block;
+  background-color:white;
+  text-align: left;
+  padding-left: 8px;
+  font-size: 14px;
+  line-height: 40px;
+  margin-top: 6px;
+}
+.myinfo_container image{
+  height: 40px;
+  width: 40px;
+  float: right;
+}
+.exbar{
+  width: 100%;
+  height: 20px;
+  margin-top: 6rpx;
+  font-size: 14px;
+  background-color: white;
+  /* position: relative;
+  top: 105rpx; */
+}
+.exbar>label{
+  width: 10%;
+  height: 20px;
+  font-size: 14px;
+  position: relative;
+  display: block;
+  left: 45%;
+}
+.exbar>image{
+  width: 5%;
+  height: 20px;
+  position: relative;
+  left: 55%;
+  top: -20px;
+}
+.exbar>label>text{
+  width: 100%;
+  height: 20px;
+  font-size: 14px;
+  display: block;
+}
+.exbar_lost_content{
+  width: 100%;
+  display: block;
+  /* background-color: white; */
+  font-size: 14px;
+  /* z-index: 1000; */
+  /* border-top: 2rpx gray solid; */
+  position: relative;
+  /* left: 85%; */
+}
+.exbar_lost_content label{
+  display: inline-block;
+  text-align: center;
+  height: 25px;
+  width: 15%;
+  background-color: white;
+  margin-left: 8%;
+  margin-top: 4px;
+  padding-top: 5px;
+}

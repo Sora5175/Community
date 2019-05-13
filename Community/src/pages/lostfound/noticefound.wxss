@@ -1,0 +1,48 @@
+/* community/src/pages/lostfound/noticefound.wxss */
+.lostsendcontainer{
+  width: 100%;
+  /* margin-left: 3%;
+  margin-right: 3%; */
+  font-size: 14px;
+  /* height:100%; */
+}
+label{
+  font-size: 18px;
+  display: block;
+}
+image{
+  width: 100%;
+  /* border: 1px solid gray; */
+  margin-top: 5px;
+  border-radius: 4px;
+}
+picker{
+  height: 24px;
+  background-color: white;
+  /* border: 1px solid gray; */
+  border-radius: 4px;
+  margin-top: 5px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+}
+page{
+  height: 100%;
+  width: 100%;
+  background-color:#F0F4F3;
+}
+textarea{
+  /* border: 1px solid gray; */
+  border-radius: 4px;
+  margin-top: 5px;
+  width: 98%;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: white;
+}
+input{
+  background-color: white;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 5px;
+}

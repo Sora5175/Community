@@ -1,0 +1,21 @@
+<!--community/src/pages/lostfound/enterfound.wxml-->
+<scroll-view scroll-y="true" class='container'>
+  <block wx:for="{{foundinfo}}" wx:for-item="item" wx:for-index="i">
+    <view class='content'>
+      <view class='left'><image src='{{item.pic}}'></image></view>
+      <view class='right'>
+        <label>请求者--{{item.name}}</label>
+        <label>联系方式--{{item.tel}}</label>
+        <label>丢失地点--{{item.lostloc}}</label>
+        <label>失物名称--{{item.lostname}}</label>
+        <label>失物颜色--{{item.color}}</label>
+        <label>失物类别--{{item.Type}}</label>
+      </view>
+      <view class='label_set'>
+        <label bindtap='enter' data-idx='{{item.id}}' data-fno='{{item.fno}}'><view hover-class='hover-view'><icon type='success' size='30' color='rgb(18, 214, 50)' data-idx='{{item.id}}' data-fno='{{item.fno}}'></icon></view></label>
+        <label bindtap='Delete' data-idx='{{item.id}}' data-fno='{{item.fno}}'><view hover-class='hover-view'><icon type='cancel' size='30' color='rgb(243, 117, 13)' data-idx='{{item.id}}' data-fno='{{item.fno}}'></icon></view></label>
+      </view>
+    </view>
+  </block>
+  <view class='load' bindtap='loadmore'><label>{{load_content}}</label></view>
+</scroll-view>

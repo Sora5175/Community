@@ -1,0 +1,16 @@
+<!--community/src/pages/lostfound/enterlost.wxml-->
+<scroll-view scroll-y="true" class='container'>
+  <block wx:for="{{lostinfo}}" wx:for-item="item" wx:for-index="i">
+    <view class='content'>
+      <view class='left'><image src='{{item.pic}}'></image></view>
+      <view class='right'>
+        <label>归还地点--{{item.returnloc}}</label>
+        <label>归还者--{{item.name}}</label>
+        <label>联系方式--{{item.tel}}</label>
+        <label id="btn" bindtap='confirm' data-idx="{{item.id}}" data-lno="{{item.lno}}"><icon type="success_no_circle" size="15"/>确认找回</label>
+        <label id="btn" bindtap='deleteinfo' data-idx="{{item.id}}" data-lno="{{item.lno}}"><icon type="clear" size="15"/>删除记录</label>
+      </view>
+    </view>
+  </block>
+  <view class='load' bindtap='loadmore'><label>{{load_content}}</label></view>
+</scroll-view>

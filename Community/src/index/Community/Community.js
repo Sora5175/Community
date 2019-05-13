@@ -78,4 +78,9 @@ Page({
       url: '../../pages/Community/Posts/Posts'
     })
   },
+  intoLostFound:function(){
+    wx.navigateTo({
+      url: '../../pages/lostfound/lostfound'
+    })
+  }
 });

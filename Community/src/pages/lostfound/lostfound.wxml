@@ -1,0 +1,125 @@
+<view class="top-tab">
+  <view class="flex-item {{currentTabIndex==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-item="itemName" wx:for-index="idx" data-idx="{{idx}}" bindtap="switchTab">
+    {{itemName}}
+  </view>
+</view>
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="up" bindscrolltolower="low">
+  <!-- 失物信息 -->
+  <view hidden="{{currentTabIndex==0 ? '' : true}}" id="lostinfo">
+    <view class='exbar'><label><text>{{exbar_lost_text}}</text></label><image src="{{exbar_lost_img}}" bindtap='pulldown_lost'></image></view>
+    <view class='exbar_lost_content' hidden='{{exbar_lost_hidden}}'>
+      <block wx:for="{{exbar_type}}" wx:for-item="item" wx:for-index="index">
+        <label data-index='{{index}}' style="background-color:{{item.color}}" bindtap='clickforlabel'>{{item.name}}</label>
+      </block>
+    </view>
+    <block wx:for="{{lostinfo}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+      <view class="feed-item" data-lno="{{item.lno}}" bindtap="loststepin">
+        <view class="feed-source">
+            <view class="avatar">
+              <image src="{{item.feed_source_img}}"></image>
+            </view>
+            <text>{{item.feed_source_name}}</text>
+        </view>
+        <view class="time">
+            <text>{{item.time}}</text>
+        </view>
+        <view class="feed-content">
+          <view class="lost-img">
+            <image src="{{item.feed_content_img}}"></image>
+          </view>
+          <view class="lost-discribe">
+            <text>{{item.feed_content_text}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 招领信息 -->
+  <view hidden="{{currentTabIndex==1 ? '' : true}}" id="foundinfo">
+    <view class='exbar'><label><text>{{exbar_found_text}}</text></label><image src="{{exbar_found_img}}" bindtap='pulldown_found'></image></view>
+    <view class='exbar_lost_content' hidden='{{exbar_found_hidden}}'>
+      <block wx:for="{{exbar_type_found}}" wx:for-item="item" wx:for-index="index">
+        <label data-index='{{index}}' style="background-color:{{item.color}}" bindtap='clickforlabel_found'>{{item.name}}</label>
+      </block>
+    </view>
+    <block wx:for="{{foundinfo}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+      <view class="feed-item" data-fno="{{item.fno}}" bindtap="foundstepin">
+        <view class="feed-source">
+            <view class="avatar">
+              <image src="{{item.feed_source_img}}"></image>
+            </view>
+            <text>{{item.feed_source_name}}</text>
+        </view>
+        <view class="time">
+            <text>{{item.time}}</text>
+        </view>
+        <view class="feed-content">
+          <view class="lost-img">
+            <image src="{{item.feed_content_img}}"></image>
+          </view>
+          <view class="lost-discribe">
+            <text>{{item.feed_content_text}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 发布失物 -->
+  <view hidden="{{currentTabIndex==2 ? '' : true}}" id="lostsend">
+    <view class="lostsendcontainer">
+      <form bindsubmit="formsubmit" enctype="multipart/form-data">
+        <label>失物名称</label>
+        <input type="text" maxlength="20" name="lostname" value="{{lostname}}" placeholder='不超过20个字'></input>
+        <label>失物类别</label>
+        <picker value="{{lj}}" bindchange="bindTypeChange" range='{{Type}}'>
+          {{Type[lj]}}
+        </picker>
+        <label>丢失地点</label>
+        <picker bindchange="bindPickerChange" value="{{i}}" range="{{locarr}}">
+          {{locarr[i]}}
+        </picker>
+        <label>丢失日期</label>
+        <picker mode="date" value="{{date}}" start="{{start}}" end="{{end}}" bindchange="bindDateChange" name='time'>
+          {{date}}
+        </picker>
+        <label>失物描述</label>
+        <textarea maxlength="100" name="describe" value="{{describe}}" placeholder='不超过100个字'></textarea>
+        <label>上传图片(选填)</label>
+        <image src="{{img}}" bindtap="uploadimg"></image>
+        <button formType="submit">提交</button>
+      </form>
+    </view>
+  </view>
+  <!-- 上传失物 -->
+  <view hidden="{{currentTabIndex==3 ? '' : true}}" id="foundsend">
+    <view class="lostsendcontainer">
+      <form bindsubmit="formsubmit_found" enctype="multipart/form-data">
+        <label>物体名称</label><input type="text" maxlength="20" name="foundname" value="{{foundname}}" placeholder='不超过20个字'></input>
+        <label>物体类别</label>
+        <picker value="{{fj}}" bindchange="bindTypeChange_found" range='{{Type}}'>
+          {{Type[fj]}}
+        </picker>
+        <label>发现地点</label>
+        <picker bindchange="FLocChange" value="{{fi}}" range="{{locarr}}">
+          {{locarr[fi]}}
+        </picker>
+        <label>返还地点</label>
+        <picker bindchange="RLocChange" value="{{ri}}" range="{{locarr}}">
+          {{locarr[ri]}}
+        </picker>
+        <label>物体描述</label><textarea maxlength="100" name="founddescribe" value="{{founddescribe}}" placeholder='不超过100个字'></textarea>
+        <label>上传图片</label><image src="{{img}}" bindtap="uploadimg"></image>
+        <button formType="submit">提交</button>
+      </form>
+    </view>
+  </view>
+  <!-- 个人信息 -->
+  <view hidden="{{currentTabIndex==4 ? '' : true}}" id="myinfo">
+    <view class='myinfo_container'>
+    <!--  <label bindtap='my_createlost'>我发布的失物信息<image src='./images/more.png'></image></label>
+      <label bindtap='my_createfound'>我发布的招领信息<image src='./images/more.png'></image></label>-->
+      <label bindtap='enterlost'>确认失物信息(遗失的物品)<image src='./images/more.png'></image></label>
+      <label bindtap='enterfound'>确认招领信息(返回给失主)<image src='./images/more.png'></image></label>
+    </view>
+  </view>
+</scroll-view>

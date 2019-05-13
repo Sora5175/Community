@@ -26,7 +26,14 @@
     "src/pages/Community/Knowledge/CVInfo/CVInfo",
     "src/pages/Community/Knowledge/GroupInfo/GroupInfo",
     "src/pages/Community/Knowledge/GroupManagement/GroupManagement",
-    "src/pages/Community/Knowledge/MemberInfo/MemberInfo"
+    "src/pages/Community/Knowledge/MemberInfo/MemberInfo",
+    "src/pages/lostfound/lostfound",
+    "src/pages/lostfound/enterfound",
+    "src/pages/lostfound/enterlost",
+    "src/pages/lostfound/foundcontent",
+    "src/pages/lostfound/lostcontent",
+    "src/pages/lostfound/noticefound",
+    "src/pages/lostfound/noticelost"
   ],
   "window": {
     "backgroundTextStyle": "light"

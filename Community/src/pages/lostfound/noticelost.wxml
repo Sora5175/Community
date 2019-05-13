@@ -1,0 +1,11 @@
+<!--community/src/pages/lostfound/noticelost.wxml-->
+<view class="lostsendcontainer">
+  <form bindsubmit="formsubmit" enctype="multipart/form-data">
+    <label>归还地点</label>
+    <picker bindchange="bindPickerChange" value="{{i}}" range="{{locarr}}">
+      {{locarr[i]}}
+    </picker>
+    <label>上传图片</label><image src="{{img}}" bindtap="uploadimg"></image>
+    <button formType="submit">提交</button>
+  </form>
+</view>

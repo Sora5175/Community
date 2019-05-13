@@ -1,0 +1,28 @@
+/* community/src/pages/lostfound/noticelost.wxss */
+.lostsendcontainer{
+  width: 100%;
+  font-size: 14px;
+  height:100%;
+}
+label{
+  font-size: 18px;
+}
+image{
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+picker{
+  height: 24px;
+  border-radius: 4px;
+  margin-top: 5px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 15px;
+  background-color: white
+}
+page{
+  height: 100%;
+  width: 100%;
+  background-color: #F0F4F3;
+}

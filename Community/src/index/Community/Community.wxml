@@ -1,5 +1,5 @@
 <view id="communityIndex">
-  <view class="communityIndex"><image src="images/Lost.png"></image><label>失物招领</label></view>
+  <view class="communityIndex" bindtap='intoLostFound'><image src="images/Lost.png"></image><label>失物招领</label></view>
   <view class="communityIndex"><image src="images/Search.png" bindtap='intoCheck'></image><label>事务查询</label></view>
   <view class="communityIndex" bindtap='intoPosts'><image src="images/Post.png"></image><label>社区贴吧</label></view>
   <view class="communityIndex" bindtap='intoKnowledge'><image src="images/Knowledge.png"></image><label>璞玉广场</label></view>

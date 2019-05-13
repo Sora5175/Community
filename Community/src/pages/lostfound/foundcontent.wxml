@@ -1,0 +1,30 @@
+<!--community/src/pages/lostfound/foundcontent.wxml-->
+<view class="feed-source" hidden="{{flag==0 ? true : ''}}">
+  <view class="avatar">
+    <image src="{{item.img}}"></image>
+  </view>
+  <text>{{item.uname}}</text>
+</view>
+<view class="content" hidden="{{flag==0 ? true : ''}}">
+  <view class="describe">
+    <text>{{item.describe}}</text>
+  </view>
+  <view class="img">
+    <image src="{{item.foundimg}}"></image>
+  </view>
+  <view class="tip">
+    <image src='./images/time.PNG'></image>
+    <label>发布时间----{{item.foundtime}}</label>
+  </view>
+  <view class="tip">
+    <image src='./images/tel.PNG'></image>
+    <label>联系电话----{{item.tel}}</label>
+  </view>
+  <view class="tip">
+    <image src='./images/xf.PNG'></image>
+    <label>邮箱地址----{{item.email}}</label>
+  </view>
+  <view class="option">
+    <button bindtap="returnfound">这是我遗失的，通知他(她)</button>
+  </view>
+</view>

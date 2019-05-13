@@ -1,0 +1,21 @@
+<!--community/src/pages/lostfound/noticefound.wxml-->
+<view class="lostsendcontainer">
+  <form bindsubmit="formsubmit" enctype="multipart/form-data">
+    <label>丢失地点</label>
+    <picker bindchange="bindPickerChange" value="{{i}}" range="{{locarr}}">
+      {{locarr[i]}}
+    </picker>
+    <label>物品名称</label><input type='text' name='lostname' placeholder='不超过20个字' maxlength='20'></input>
+    <label>物品颜色</label><input type='text' name='color' placeholder='不超过20个字' maxlength='20'></input>
+    <label>物品类别</label>
+    <picker value="{{j}}" bindchange="bindTypeChange" range='{{Type}}'>
+      {{Type[j]}}
+    </picker>
+    <label>丢失时间</label>
+    <picker mode="date" value="{{date}}" start="{{start}}" end="{{end}}" bindchange="bindDateChange" name='time'>
+      {{date}}
+    </picker>
+    <label>失物图片(选填)</label><image src="{{img}}" bindtap="uploadimg"></image>
+    <button formType="submit">提交</button>
+  </form>
+</view>

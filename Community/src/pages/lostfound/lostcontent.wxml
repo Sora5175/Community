@@ -1,0 +1,34 @@
+<!--community/src/pages/lostfound/lostcontent.wxml-->
+<view class="feed-source" hidden="{{flag==0 ? true : ''}}">
+  <view class="avatar">
+    <image src="{{item.img}}"></image>
+  </view>
+  <text>{{item.uname}}</text>
+</view>
+<view class="content" hidden="{{flag==0 ? true : ''}}">
+  <view class="describe">
+    <text>{{item.describe}}</text>
+  </view>
+  <view class="img">
+    <image src="{{item.lostimg}}"></image>
+  </view>
+  <view class="tip">
+    <image src='./images/time.PNG'></image>
+    <label>发布时间----{{item.losttime}}</label>
+  </view>
+  <view class="tip">
+    <image src='./images/tel.PNG'></image>
+    <label>联系电话----{{item.tel}}</label>
+  </view>
+  <view class="tip">
+    <image src='./images/xf.PNG'></image>
+    <label>邮箱地址----{{item.email}}</label>
+  </view>
+  <view class="tip">
+    <image src='./images/loc.PNG'></image>
+    <label>丢失地点----{{item.location}}</label>
+  </view>
+  <view class="option">
+    <button bindtap="returnlost">我捡到了，通知他(她)</button>
+  </view>
+</view>
