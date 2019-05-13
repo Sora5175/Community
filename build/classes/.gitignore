@@ -1,0 +1,16 @@
+/action/
+/c3p0-config.xml
+/dao/
+/daoConfig.properties
+/entity/
+/factory/
+/interceptor/
+/struts-interceptor.xml
+/struts-login.xml
+/struts-superadmin-user.xml
+/struts-superadmin.xml
+/struts-test.xml
+/struts-wx-lostfound.xml
+/struts-wx-user.xml
+/struts.xml
+/util/

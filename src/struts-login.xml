@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 登录 -->
+	<package name="login" namespace="/login" extends="json-default">
+		<!-- 登录界面 -->
+		<action name="loginframe">
+			<result>/WEB-INF/jsp/login.jsp</result>
+		</action>
+		<!-- 验证码 -->
+		<action name="code" class="action.userAction.CodeAction">
+			<result name="success" type="stream">
+				<param name="inputName">ins</param>
+			</result>
+		</action>
+		<!-- 检查验证码输入通过 -->
+		<action name="checkcode" class="action.userAction.CheckCodeAction">
+			<result name="success" type="json">
+				<param name="root">flag</param>
+			</result>
+		</action>
+		<!-- 检查用户名密码输入通过 -->
+		<action name="checkpass" class="action.userAction.CheckPassAction">
+			<result name="success" type="json">
+				<param name="root">pass</param>
+			</result>
+		</action>
+	</package>
+</struts>

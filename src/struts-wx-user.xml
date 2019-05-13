@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="wx-user" namespace="/wx-user" extends="json-default">
+		<action name="qrCode" class="action.wxAction.QrCodeAction">
+			<result name="success" type="stream">
+				<param name="inputName">ins</param>
+			</result>
+		</action>
+		<action name="sign" class="action.wxAction.SignAction">
+			<result name="success" type="json">
+				<param name="includeProperties">success,timeout</param>
+			</result>
+		</action>
+		<action name="login" class="action.wxAction.LoginAction">
+			<result name="success" type="json">
+				<param name="includeProperties">userInfo.*,openId,sessionKey</param>
+			</result>
+		</action>
+		<!-- 获取学校列表-->
+		<action name="getSchoolList" class="action.wxAction.GetSchoolListAction">
+			<result type="json">
+				<param name="root">schoolList</param>
+			</result>
+		</action>
+		<!-- 获取院系列表-->
+		<action name="getDepartmentList" class="action.wxAction.GetDepartmentListAction">
+			<result type="json">
+				<param name="root">departmentList</param>
+			</result>
+		</action>
+		<!-- 获取年级列表-->
+		<action name="getGradeList" class="action.wxAction.GetGradeListAction">
+			<result type="json">
+				<param name="root">gradeList</param>
+			</result>
+		</action>
+		<!-- 获取班级列表-->
+		<action name="getClassList" class="action.wxAction.GetClassListAction">
+			<result type="json">
+				<param name="root">classList</param>
+			</result>
+		</action>
+		<!-- 添加用户操作-->
+		<action name="register" class="action.wxAction.RegisterAction">
+			<result type="json">
+				<param name="includeProperties">userInfo.*,pass</param>
+			</result>
+		</action>
+		<!-- 修改用户操作-->
+		<action name="updateUserInfo" class="action.wxAction.UpdateUserInfoAction">
+			<result type="json">
+				<param name="includeProperties">userInfo.*,pass</param>
+			</result>
+		</action>
+		<!-- 创建团队 -->
+		<action name="createGroup" class="action.wxAction.CreateGroupAction">
+			<result type="json">
+				<param name="includeProperties">pass</param>
+			</result>
+		</action>
+		<!-- 获取团队列表 -->
+		<action name="getGroupList" class="action.wxAction.GetGroupListAction">
+			<result type="json">
+				<param name="includeProperties">groupList.*,groupPublisher.*,isSended.*</param>
+			</result>
+		</action>
+		<!-- 投递简历  -->
+		<action name="sendCV" class="action.wxAction.SendCVAction">
+			<result type="json">
+				<param name="includeProperties">pass</param>
+			</result>
+		</action>
+		<!-- 获取未审核简历  -->
+		<action name="getMyReceivedCV" class="action.wxAction.GetMyReceivedCVAction">
+			<result type="json">
+				<param name="includeProperties">groupList.*,CVNumber.*</param>
+			</result>
+		</action>
+		<!-- 获取未审核简历列表  -->
+		<action name="getCVSList" class="action.wxAction.GetCVSListAction">
+			<result type="json">
+				<param name="includeProperties">CVSList.*,userInfoList.*</param>
+			</result>
+		</action>
+		<!-- 获取我投递的简历列表  -->
+		<action name="getMySendedCV" class="action.wxAction.GetMySendedCVAction">
+			<result type="json">
+				<param name="includeProperties">groupList.*,CVList.*</param>
+			</result>
+		</action>
+		<!-- 简历操作 -->
+		<action name="CVAction" class="action.wxAction.CVAction">
+			<result type="json">
+				<param name="includeProperties">pass,message</param>
+			</result>
+		</action>
+		<!-- 获取我的团队 -->
+		<action name="getMyGroupList" class="action.wxAction.GetMyGroupListAction">
+			<result type="json">
+				<param name="includeProperties">groupList.*,isFull.*,isOwner.*</param>
+			</result>
+		</action>
+		<!-- 修改我的团队 -->
+		<action name="updateGroup" class="action.wxAction.UpdateGroupAction">
+			<result type="json">
+				<param name="includeProperties">pass,message</param>
+			</result>
+		</action>
+		<!-- 获取成员信息 -->
+		<action name="getMemberList" class="action.wxAction.GetMemberListAction">
+			<result type="json">
+				<param name="includeProperties">memberList.*,alternateMemberList.*</param>
+			</result>
+		</action>
+		<!-- 成员操作 -->
+		<action name="memberAction" class="action.wxAction.MemberAction">
+			<result type="json">
+				<param name="includeProperties">pass,message</param>
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 超级管理员对用户操作 -->
+	<package name="superadmin_user" namespace="/superadmin_user" extends="superadmin">
+		<!-- 用户视图页面 -->
+		<action name="userview">
+			<result>/WEB-INF/jsp/userview.jsp</result>
+		</action>
+		<!-- 用户列表页面 -->
+		<action name="userlist">
+			<result>/WEB-INF/jsp/userlist.jsp</result>
+		</action>
+		<!-- 用户信息修改页面 -->
+		<action name="useredit">
+			<result>/WEB-INF/jsp/useredit.jsp</result>
+		</action>
+		<action name="useradd">
+			<result>/WEB-INF/jsp/useradd.jsp</result>
+		</action>
+		<!-- 获取用户列表 -->
+		<action name="getUserInfoList" class="action.userAction.GetUserInfoListAction">
+			<result type="json">
+				<param name="includeProperties">userInfoList.*,pageTotalNum</param>
+			</result>
+		</action>
+		<!-- 获取用户数量 -->
+		<action name="getUserNum" class="action.userAction.GetUserNumAction">
+			<result type="json">
+				<param name="includeProperties">userNum</param>
+			</result>
+		</action>
+		<!-- 获取用户学生以及教师数量 -->
+		<action name="getUserProportion" class="action.userAction.GetUserProportionAction">
+			<result type="json">
+				<param name="includeProperties">studentNum,teacherNum</param>
+			</result>
+		</action>
+		<!-- 获取用户登录数量 -->
+		<action name="getUserLoginNum" class="action.userAction.GetUserLoginNumAction">
+			<result type="json">
+				<param name="root">userLoginNum</param>
+			</result>
+		</action>
+		<!-- 获取用户注册数量 -->
+		<action name="getUserRegisterNum" class="action.userAction.GetUserRegisterNumAction">
+			<result type="json">
+				<param name="root">userRegisterNum</param>
+			</result>
+		</action>
+		<!-- 获取用户注册列表 -->
+		<action name="getUserRegisterList" class="action.userAction.GetUserRegisterListAction">
+			<result type="json">
+				<param name="includeProperties">userRegisterList.*,pageTotalNum</param>
+			</result>
+		</action>
+		<!-- 获取用户数据-->
+		<action name="getUserInfo" class="action.userAction.GetUserInfoAction">
+			<result type="json">
+				<param name="root">userInfo</param>
+			</result>
+		</action>
+		<!-- 获取学校列表-->
+		<action name="getSchoolList" class="action.userAction.GetSchoolListAction">
+			<result type="json">
+				<param name="root">schoolList</param>
+			</result>
+		</action>
+		<!-- 获取院系列表-->
+		<action name="getDepartmentList" class="action.userAction.GetDepartmentListAction">
+			<result type="json">
+				<param name="root">departmentList</param>
+			</result>
+		</action>
+		<!-- 获取年级列表-->
+		<action name="getGradeList" class="action.userAction.GetGradeListAction">
+			<result type="json">
+				<param name="root">gradeList</param>
+			</result>
+		</action>
+		<!-- 获取班级列表-->
+		<action name="getClassList" class="action.userAction.GetClassListAction">
+			<result type="json">
+				<param name="root">classList</param>
+			</result>
+		</action>
+		<!-- 添加用户操作-->
+		<action name="addUserInfo" class="action.userAction.AddUserInfoAction">
+			<result type="json">
+				<param name="root">pass</param>
+			</result>
+		</action>
+		<!-- 修改用户操作-->
+		<action name="updateUserInfo" class="action.userAction.UpdateUserInfoAction">
+			<result type="json">
+				<param name="root">pass</param>
+			</result>
+		</action>
+		<!-- 删除用户操作-->
+		<action name="delUserInfo" class="action.userAction.DelUserInfoAction">
+			<result type="json">
+				<param name="root">pass</param>
+			</result>
+		</action>
+		<!-- 退出操作-->
+		<action name="userExit" class="action.userAction.UserExitAction">
+			<result name="success" type="redirectAction">
+				<param name="namespace">/login</param>
+				<param name="actionName">loginframe</param>
+			</result>
+		</action>
+	</package>
+</struts>

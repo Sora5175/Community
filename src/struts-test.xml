@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 登录 -->
+	<package name="test" namespace="/test" extends="json-default">
+		<!-- 登录界面(python) -->
+		<action name="test">
+			<result>/WEB-INF/jsp/test.jsp</result>
+		</action>
+		<!-- 课表界面(python) -->
+		<action name="lessonList">
+			<result>/WEB-INF/jsp/lessonList.jsp</result>
+		</action>
+		<!-- 验证码(python) -->
+		<action name="codeImg" class="action.testAction.CodeAction">
+			<result name="success" type="stream">
+				<param name="inputName">ins</param>
+			</result>
+		</action>
+		<!-- 登录验证(python) -->
+		<action name="checkLogin" class="action.testAction.CheckLoginAction">
+			<result name="success" type="redirectAction">
+				<param name="namespace">/test</param>
+				<param name="actionName">lessonList</param>
+			</result>
+		</action>
+	</package>
+</struts>

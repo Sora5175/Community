@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<include file="struts-test.xml"></include>
+	<include file="struts-login.xml"></include>
+	<include file="struts-interceptor.xml"></include>
+	<include file="struts-superadmin.xml"></include>
+	<include file="struts-superadmin-user.xml"></include>
+	<include file="struts-wx-user.xml"></include>
+	<include file="struts-wx-lostfound.xml"></include>
+</struts>

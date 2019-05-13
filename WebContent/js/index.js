@@ -1,0 +1,23 @@
+$(function(){
+	//左侧导航栏动作
+	$(".active").on("click",function(){
+		$(this).nextAll("ul").slideToggle();
+	});
+	$("#menu>ul>li>ul>li>a").on("click",function(){
+		window.location.href = $(this).attr("id")+"?";
+	});
+	//时间输入框聚焦改为date类型
+	$(".input_date").on("focus",function(){
+	   $(this).attr("type","date");
+	   $(this).focus();
+	});
+	//时间输入框失去焦点改为text类型
+	$(".input_date").on("blur",function(){
+		   $(this).attr("type","text");
+		   $(this).blur();
+	});
+	//用户退出
+	$("#exit").on("click",function(){
+		location.href="userExit";
+	});
+});
