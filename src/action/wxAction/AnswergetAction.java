@@ -1,9 +1,10 @@
-package entity;
+package action.wxAction;
+import java.util.List;
 
-import java.io.Serializable;
-
-public class Answer implements Serializable{
-	private static final long serialVersionUID = 1L;
+import dao.AnswerDAO;
+import entity.Answer;
+import factory.DAOFactory;
+public class AnswergetAction {
 	int aNo;
 	String content;
 	String qdescribe;
@@ -16,25 +17,18 @@ public class Answer implements Serializable{
 	int downVotedNum;
 	String isAdopted;
 	String isExist;
-	public Answer(int aNo, String content,String qdescribe, int qNo, String qt, String responderNo, String responderName, String responderTime, int upVotedNum,
-			int downVotedNum, String isAdopted, String isExist) {
-		super();
-		this.aNo = aNo;
-		this.content = content;
-		this.qdescribe = qdescribe;
-		this.qNo = qNo;
-		this.qt = qt;
-		this.responderNo = responderNo;
-		this.responderName = responderName;
-		this.responderTime = responderTime;
-		this.upVotedNum = upVotedNum;
-		this.downVotedNum = downVotedNum;
-		this.isAdopted = isAdopted;
-		this.isExist = isExist;
+	List<Answer> answerList;
+	public String execute() {
+		AnswerDAO a = (AnswerDAO)DAOFactory.getInstance("AnswerDAO");
+		String s = String.valueOf(qNo);
+		try {
+			answerList = a.findqa(s);
+
+		}catch (Exception e) {
+		e.printStackTrace();
 	}
-	public Answer() {
-		
-	}
+	return "success";
+		}
 	public int getANo() {
 		return aNo;
 	}
@@ -107,5 +101,11 @@ public class Answer implements Serializable{
 	public void setIsExist(String isExist) {
 		this.isExist = isExist;
 	}
-	
+	public List<Answer> getAnswerList() {
+		return answerList;
+	}
+
+	public void setAnswerList(List<Answer> answerList) {
+		this.answerList = answerList;
+	}
 }

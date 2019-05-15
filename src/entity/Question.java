@@ -4,17 +4,29 @@ import java.io.Serializable;
 
 public class Question implements Serializable{
 	private static final long serialVersionUID = 1L;
-	String qNo;
+	int qNo;
+	int aNo;
+	String qt;
+	String at;
+	int upVotedNum;
+	int downVotedNum;
 	String content;
+	String qdescribe;
 	String publisherNo;
 	String publisherTime;
 	String isExist;
 	String isSolved;
-	public Question(String qNo, String content, String publisherNo, String publisherTime, String isExist,
+	public Question(int qNo, int aNo,String qt,String at,int upVotedNum,int downVotedNum,String content,String qdescribe, String publisherNo, String publisherTime, String isExist,
 			String isSolved) {
 		super();
 		this.qNo = qNo;
+		this.aNo = aNo;
+		this.qt = qt;
+		this.at = at;
+		this.upVotedNum = upVotedNum;
+		this.downVotedNum = downVotedNum;
 		this.content = content;
+		this.qdescribe = qdescribe;
 		this.publisherNo = publisherNo;
 		this.publisherTime = publisherTime;
 		this.isExist = isExist;
@@ -23,17 +35,54 @@ public class Question implements Serializable{
 	public Question() {
 		// TODO Auto-generated constructor stub
 	}
-	public String getqNo() {
+	public int getANo() {
+		return aNo;
+	}
+	public void setANo(int aNo) {
+		this.aNo = aNo;
+	}
+	public String getQt() {
+		return qt;
+	}
+	public void setQt(String qt) {
+		this.qt = qt;
+	}
+	public String getAt() {
+		return at;
+	}
+	public void setAt(String at) {
+		this.at = at;
+	}
+	public int getUpVotedNum() {
+		return upVotedNum;
+	}
+	public void setUpVotedNum(int upVotedNum) {
+		this.upVotedNum = upVotedNum;
+	}
+	public int getDownVotedNum() {
+		return downVotedNum;
+	}
+	public void setDownVotedNum(int downVotedNum) {
+		this.downVotedNum = downVotedNum;
+	}
+	public int getQNo() {
 		return qNo;
 	}
-	public void setqNo(String qNo) {
+	public void setQNo(int qNo) {
 		this.qNo = qNo;
 	}
+
 	public String getContent() {
 		return content;
 	}
 	public void setContent(String content) {
 		this.content = content;
+	}
+	public String getQdescribe() {
+		return qdescribe;
+	}
+	public void setQdescribe(String qdescribe) {
+		this.qdescribe = qdescribe;
 	}
 	public String getPublisherNo() {
 		return publisherNo;

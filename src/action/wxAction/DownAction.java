@@ -1,40 +1,44 @@
-package entity;
+package action.wxAction;
 
-import java.io.Serializable;
+import dao.AnswerDAO;
+import entity.Answer;
+import factory.DAOFactory;
 
-public class Answer implements Serializable{
-	private static final long serialVersionUID = 1L;
+
+public class DownAction {
 	int aNo;
 	String content;
-	String qdescribe;
 	int qNo;
-	String qt;
 	String responderNo;
-	String responderName;
 	String responderTime;
 	int upVotedNum;
 	int downVotedNum;
 	String isAdopted;
 	String isExist;
-	public Answer(int aNo, String content,String qdescribe, int qNo, String qt, String responderNo, String responderName, String responderTime, int upVotedNum,
-			int downVotedNum, String isAdopted, String isExist) {
-		super();
-		this.aNo = aNo;
-		this.content = content;
-		this.qdescribe = qdescribe;
-		this.qNo = qNo;
-		this.qt = qt;
-		this.responderNo = responderNo;
-		this.responderName = responderName;
-		this.responderTime = responderTime;
-		this.upVotedNum = upVotedNum;
-		this.downVotedNum = downVotedNum;
-		this.isAdopted = isAdopted;
-		this.isExist = isExist;
+	boolean pass = false;
+	public String execute() {
+		AnswerDAO a = (AnswerDAO)DAOFactory.getInstance("AnswerDAO");
+		System.out.println(upVotedNum);
+		System.out.println(aNo);
+		try {
+			Answer answer = new Answer();
+			answer.setANo(aNo); 
+			answer.setContent("");
+			answer.setQNo(0);
+			answer.setResponderNo("");
+			answer.setResponderTime("");
+			answer.setUpVotedNum(0);
+			answer.setDownVotedNum(downVotedNum);
+			answer.setIsAdopted("");
+			answer.setIsExist("");
+			a.down(answer);
+			pass = true;
+			System.out.println(pass);
+		}catch (Exception e) {
+		e.printStackTrace();
 	}
-	public Answer() {
-		
-	}
+	return "success";
+		}
 	public int getANo() {
 		return aNo;
 	}
@@ -47,35 +51,17 @@ public class Answer implements Serializable{
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getQdescribe() {
-		return qdescribe;
-	}
-	public void setQdescribe(String qdescribe) {
-		this.qdescribe = qdescribe;
-	}
 	public int getQNo() {
 		return qNo;
 	}
 	public void setQNo(int qNo) {
 		this.qNo = qNo;
 	}
-	public String getQt() {
-		return qt;
-	}
-	public void setQt(String qt) {
-		this.qt = qt;
-	}
 	public String getResponderNo() {
 		return responderNo;
 	}
 	public void setResponderNo(String responderNo) {
 		this.responderNo = responderNo;
-	}
-	public String getResponderName() {
-		return responderName;
-	}
-	public void setResponderName(String responderName) {
-		this.responderName = responderName;
 	}
 	public String getResponderTime() {
 		return responderTime;
@@ -107,5 +93,10 @@ public class Answer implements Serializable{
 	public void setIsExist(String isExist) {
 		this.isExist = isExist;
 	}
-	
+	public boolean isPass() {
+		return pass;
+	}
+	public void setPass(boolean pass) {
+		this.pass = pass;
+	}
 }

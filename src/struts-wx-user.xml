@@ -121,5 +121,52 @@
 				<param name="includeProperties">pass,message</param>
 			</result>
 		</action>
+		<action name="getActivity" class="action.wxAction.GetActivity">
+			<result type="json">
+				<param name="includeProperties">list.*</param>
+			</result>
+		</action>
+		<!-- 点赞-->
+		<action name="up" class="action.wxAction.UpAction">
+			<result type="json">
+				<param name="includeProperties">upVotedNum,pass</param>
+			</result>
+		</action>
+		<!-- 点灭-->
+		<action name="down" class="action.wxAction.DownAction">
+			<result type="json">
+				<param name="includeProperties">downVotedNum,pass</param>
+			</result>
+		</action>
+		<!-- 获取数据-->
+		<action name="upget" class="action.wxAction.UpgetAction">
+			<result type="json">
+				<param name="root">up</param>
+			</result>
+		</action>
+		<!-- 发布问题-->
+		<action name="ask" class="action.wxAction.AskAction">
+			<result type="json">
+				<param name="root">pass</param>
+			</result>
+		</action>
+		<!-- 回答问题-->
+		<action name="answer" class="action.wxAction.AnswerAction">
+			<result type="json">
+				<param name="root">pass</param>
+			</result>
+		</action>
+		<!-- 回答列表-->
+		<action name="answerget" class="action.wxAction.AnswergetAction">
+			<result type="json">
+				<param name="root">answerList</param>
+			</result> 
+		</action>
+		<!-- 问题列表-->
+		<action name="questionget" class="action.wxAction.QuestiongetAction">
+			<result type="json">
+				<param name="root">questionList</param>
+			</result> 
+		</action>
 	</package>
 </struts>
