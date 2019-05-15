@@ -1,0 +1,121 @@
+page{
+  background-color: #fff8f8;
+}
+view{
+  background-color: #ffffff;
+}
+#checkIndex{
+  border-bottom: 0rpx solid #EBEBEB;
+  width: 720rpx;
+  padding: 0rpx 15rpx;
+}
+ 
+.title{
+  justify-content: center;
+}
+.twl{
+  height:100rpx;
+  text-align: center;
+  justify-content: center;
+  color: rgb(68, 64, 54);
+  font-size: 38rpx;
+}
+.activity{
+  position: absolute;
+  width: 755rpx;
+  height: 1500rpx;
+  left: 0%;
+  margin-left: 0rpx;
+  top: 70rpx;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  border: 0rpx solid blueviolet;
+  border-radius: 2%;
+
+}
+.table{
+  border: 0 rpx solid #dadada;
+  border-right: 0;
+  border-bottom: 0;
+  width: 100%;
+  font-size: 300rpx;
+  border-radius: 5%;
+ 
+}
+.tr{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100rpx;
+  background-color: #dadada;
+}
+.bg-w{
+
+  height: 110rpx;
+}
+
+.th2,.th3,.th4,.th5,.td2,.td3,.td4,.td5{
+  width: 40%;
+ background-color: rgb(166, 171, 182);
+ padding: 9rpx;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ height: 110rpx;
+}
+
+.td22,.td33,.td44,.td55{
+ width: 40%;
+ background-color:#dadada;
+ padding: 9rpx;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 110rpx;
+ text-align: center;
+}
+.th{
+  font-weight: 800;
+  background-color: rgb(117, 115, 114);
+  font-size: 28rpx;
+  color: #f4edfa;
+  display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ height: 110rpx;
+
+  }
+.th1{
+  width: 120rpx;
+  text-align: center;
+  padding:7rpx;
+  
+}
+.td1{
+  width: 120rpx;
+  background-color: rgb(166, 171, 182);
+  padding: 9rpx;
+  display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.td11{
+  width: 120rpx;
+  background-color: #dadada;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 9rpx;
+  height: 110rpx;
+  padding-bottom: 0rpx;
+  border-bottom: 0rpx;
+}
+.td{
+  font-size: 25.5rpx;
+  color: rgb(15, 15, 15); 
+  height: 84rpx;
+}

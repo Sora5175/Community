@@ -1,0 +1,32 @@
+
+<view class="title" id="vue">
+    <!--> <view class="twl" >{{name}}</view>-->
+    <view class="twl" >您已报名的活动如下</view>
+  <view class="activity">    
+      <view class="table">
+         <view class="tr bg-w">
+             <view class="th th1">活动编号</view>
+             <view class="th th2">活动内容</view>
+             <view class="th th3">活动开始时间</view>
+             <view class="th th4">活动结束时间</view>
+             <view class="th th5">活动举行地址</view>
+         </view>
+         <block wx:for="{{temp}}" wx:key="item">
+             <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+              <view class="td td1">{{item.activityid}}</view>
+              <view class="td td2">{{item.content}}</view>
+              <view class="td td3">{{item.starttime}}</view>
+              <view class="td td4">{{item.endtime}}</view>
+              <view class="td td5">{{item.loc}}</view>
+              </view>
+               <view class="tr " wx:else>
+              <view class="td td11">{{item.activityid}}</view>
+              <view class="td td22">{{item.content}}</view>
+              <view class="td td33">{{item.starttime}}</view>
+              <view class="td td44">{{item.endtime}}</view>
+              <view class="td td55">{{item.loc}}</view>
+              </view>
+         </block>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<view id="checkView">
+  <view id="checkIndex">
+    <input id="questionInput" confirm-type='search' bindinput='askinput' bindconfirm='sub' placeholder='输入问题标题'>{{content}}</input>
+    <image src="images/ask.png" bindtap='sub'></image>
+  </view>
+</view>
+<view id="describe">
+  <textarea id="txt" bindinput='describeinput'></textarea>
+</view>

@@ -1,0 +1,62 @@
+<!--answer.wxml-->
+<view class="container">
+    <view class="question" bindtap="toQuestion">
+        <text class="question-title">{{qt}}</text>
+    </view>
+    <view class="answerer-wrp">
+        <view class="bg-half"></view>
+        <view class="answerer">
+            <view class="avatar flex-item">
+                <image src="images/icon1.jpeg"></image>
+            </view>
+            <view class="answerer-info flex-item">
+                <text class="answerer-name">{{rname}}</text>
+
+            </view>
+            <view class="follow flex-item">
+                <text>十 关注</text>
+            </view>
+        </view>
+    </view>
+    <view class="answer-content">
+        <text>{{text}}</text>
+        <image mode='widthFix'src="images/test.jpg"></image>
+        
+    </view>
+
+    <view class="answer-footer">
+        <button class="good" bindtap='upAction' disabled='{{turnup}}'>
+            <view class="good-bad">
+                <image src="images/good.png"></image>
+            </view>
+            <view class="good-num">{{up}}</view>
+        </button>
+        <button class="bad" bindtap='downAction'disabled='{{turndown}}'>
+            <view class="bad-good">
+                <image src="images/bad.png"></image>
+            </view>
+            <view class="bad-num">{{down}}</view>
+        </button>
+        <view class="operation-wrp flex-item">
+            <view class="operation">
+                <view class="operation-btn flex-item">
+                    <image src="images/heart2.png"></image>
+                    <text>感谢</text>
+                </view>
+                <view class="operation-btn flex-item">
+                    <image src="images/star2.png"></image>
+                    <text>收藏</text>
+                </view>
+                <view class="operation-btn flex-item">
+                    <image src="images/comment.png"></image>
+                    <text>302</text>
+                </view>
+
+            </view>
+        </view>
+
+
+
+    </view>
+</view>
+

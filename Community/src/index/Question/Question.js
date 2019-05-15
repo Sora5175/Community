@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+   
   },
 
   /**
@@ -62,4 +63,20 @@ Page({
   onShareAppMessage: function () {
 
   },
+  gettext: function (e) {
+    var actionArr = this.data.actionArr;
+    var val = e.detail.value;
+    getApp().globalData.questioninput = val;
+  },
+  intoSearch: function () {
+    wx.navigateTo({
+      url: '../../pages/questionlist/questionlist',
+    })
+  },
+  askAction: function () {
+    wx.navigateTo({
+      url: '../../pages/ask/ask',
+    })
+  },
+  
 });

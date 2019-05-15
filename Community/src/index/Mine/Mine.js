@@ -70,4 +70,10 @@ Page({
       url: '../../pages/Mine/MineInfo/mineInfo',
     });
   },
+  intoMineActivitied:function(){
+    var that = this;
+    wx.navigateTo({
+      url: '../../pages/Mine/activitied/activitied?signPeople=' + that.data.userName
+    })
+  }
 });

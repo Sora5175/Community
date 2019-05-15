@@ -1,5 +1,5 @@
 <view id="mineHeader"><image src="images/Sculpture.jpg"></image><label>{{userName}}</label></view>
-<view class="mineDetails">已报名活动或竞赛<image src="images/Into.png"></image></view>
+<view class="mineDetails" bindtap='intoMineActivitied'>已报名活动或竞赛<image src="images/Into.png"></image></view>
 <view class="mineDetails">个人评价<image src="images/Into.png"></image></view>
 <view class="mineDetails" bindtap='intoMineInfo'>我的信息<image src="images/Into.png"></image></view>
 <view class="mineDetails">我的问答<image src="images/Into.png"></image></view>

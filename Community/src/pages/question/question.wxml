@@ -1,0 +1,73 @@
+<!--question.wxml-->
+<view class="container">
+    <view class="question-wrp">
+        <view class="question-item">
+            <view class="que-tag">
+                <text class="tag">编程语言</text>
+                <text class="tag">C/C++/C#</text>
+                <text class="tag">代码设计</text>
+                <text class="tag">程序员</text>
+            </view>
+            <view class="que-title">
+            {{qt}}
+            </view>
+            <view class="que-content">{{answerList[0].qdescribe}}</view>
+            <view class="que-follow">
+                <view class="left">
+                    <view class="watch">
+                        <image src="images/eye.png"></image>
+                        <text>2416</text>
+                    </view>
+                    <view class="comment">
+                        <image src="images/comment2.png"></image>
+                        <text>13</text>
+                    </view>
+                </view>
+                <view class="right">
+                    关注
+                </view>
+            </view>
+        </view>
+        <view class="que-operate flex-wrp">
+            <view class="invite flex-item">
+                <image src="images/invite.png"></image>
+                <text>邀请回答</text>
+            </view>
+            <view class="write flex-item" bindtap="askTap">
+                <image src="images/write.png"></image>
+                <text>写回答</text>
+            </view>
+        </view>
+    </view>
+    <view class="answer-feed" wx:for="{{answerList}}" wx:key="item" >
+        <view  bindtap="bindItemTap" class="feed-item" data-item="{{item.ANo}}">
+            <view class="feed-source">
+                <a class="" bindTap="">
+                    <view class="avatar">
+                        <image src="images/icon1.jpeg"></image>
+                    </view>
+                    <text>{{item.responderName}}</text>
+                </a>
+            </view>
+            <view class="feed-content">
+                <view class="answer-body">
+                    <view>
+                        <text class="answer-txt">{{item.content}}</text>
+                    </view>
+                    <view class="answer-actions">
+                        <view class="like dot">
+                            <a>{{item.upVotedNum}} 赞同 </a>
+                        </view>
+                        <view class="comments dot">
+                            <a>{{item.downVotedNum}} 反对 </a>
+                        </view>
+                        <view class="time">
+                            <a>{{item.responderTime}}</a>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>   
+</view>
+

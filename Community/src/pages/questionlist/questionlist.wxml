@@ -1,0 +1,40 @@
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="search flex-wrp">
+      <view class="search-left flex-item">
+          <image src="images/search.png"></image>
+          <input placeholder="搜索话题, 问题或人" placeholder-class="search-placeholder"confirm-type='search' bindinput='gettext' bindconfirm='intoSearch'/>
+      </view>
+      <view class="search-right flex-item" bindtap="upper">
+          <image src="images/lighting.png"></image>
+      </view>
+  </view>
+<view class="answer-feed" wx:for="{{questionList}}" wx:key="item" >
+        <view  class="feed-item" >
+            <view class="feed-source"  bindtap="bindQueTap" data-item="{{item.QNo}}">
+                <a class="">
+                    <text>{{item.qt}}</text>
+                </a>
+            </view>
+            <view class="feed-content" bindtap="bindAnsTap" data-item="{{item.ANo}}">
+                <view class="answer-body">
+                    <view>
+                        <text class="answer-text">{{item.at+"..."}}</text>
+                    </view>
+                    <view class="answer-actions">
+                        <view class="like dot">
+                            <a>{{item.upVotedNum}} 赞同 </a>
+                        </view>
+                        <view class="comments dot">
+                            <a>{{item.downVotedNum}} 反对 </a>
+                        </view>
+                        <view class="time">
+                            <a>{{item.responderTime}}</a>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+ </view>
+
+    
+</scroll-view>

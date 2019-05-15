@@ -1,21 +1,30 @@
 <view id="checkView">
   <view id="checkIndex">
     <image src="images/Search.png"></image>
-    <input id="questionInput" placeholder='在这里输入问题'></input>
+    <input id="questionInput" confirm-type='search' bindinput='gettext' bindconfirm='intoSearch' >{{questioninput}}</input>
     <label>|</label>
-    <image src="images/Edit.png"></image>
-    <label>提问</label>
+    <image src="images/Edit.png" ></image>
+    <label bindtap='askAction'>提问</label>
   </view>
 </view>
 <view id="content">
     <view class="message">
-    <view class="messageHeader"><label>关于学校留校的疑问</label><button class="notFocused">关注</button></view>
-    <view class="messageContent"><label>暑假留校需要准备哪些材料，以及一些相应的准备，留校会有哪些不方便的地方？</label></view>
-    <view class="messageFooter"><label>47 关注</label></view>
+    <view class="messageHeader"><label>C语言中指针的原理及使用方法</label><button class="isFocused">关注</button></view>
+    <view class="messageContent"><label>在学习C语言的过程中，指针式最为关键和重要的一部分，但是很多时候往往不能够准确地理解和运用指针，希望有学霸能够讲一讲C中指针的原理和实用实例</label></view>
+    <view class="messageFooter"><label>549 关注</label></view>
   </view>
     <view class="message">
-    <view class="messageHeader"><label>计算机组成与结构3.7！！！</label><button class="isFocused">已关注</button></view>
-    <view class="messageContent"><image src="images/question.jpg" mode="widthFix"></image><label>这边 x/2 和 2x 不会求啊，等一个大佬！</label></view>
-    <view class="messageFooter"><label>56 关注</label></view>
+    <view class="messageHeader"><label>《地球最后的夜晚》到底讲了什么，你看懂了吗？</label><button class="isFocused">已关注</button></view>
+    <view class="messageContent"><label>通过营销吸引到的观众与对影片的类型偏好并不匹配，对电影口碑、票房、导演等可能会带来哪些负面影响？
+
+最近《地球最后的夜晚》在各个渠道的宣发十分强势，影片的首日预售票房也破6000万。《地球最后的夜晚》作为毕赣导演的文艺爱情片，由于目前的宣发类似《前任 3》的商业片模式而饱受讨论，不少观众看完之后觉得看不懂、催眠等，很多观众表示有些「水土不服」。
+
+《地球最后的夜晚》的营销手段是否与其「文艺片」的调性不符？</label></view>
+    <view class="messageFooter"><label>2071 关注</label></view>
+  </view>
+    <view class="message">
+    <view class="messageHeader"><label>关于学校留校的疑问</label><button class="notFocused">关注</button></view>
+    <view class="messageContent"><label>暑假留校需要准备哪些材料，以及一些相应的准备，留校会有哪些不方便的地方？</label></view>
+    <view class="messageFooter"><label>325 关注</label></view>
   </view>
 </view>

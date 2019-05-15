@@ -1,0 +1,9 @@
+<view id="checkView">
+  <view id="checkIndex">
+    <view id="qname"><text>{{qt}}</text></view>
+    <image src="images/ans.png" bindtap='sub'></image>
+  </view>
+</view>
+<view id="content">
+  <textarea id="txt"bindinput='ansinput'></textarea>
+</view>

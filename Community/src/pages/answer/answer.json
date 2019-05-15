@@ -1,6 +1,6 @@
 {
-  "navigationBarTitleText": "校园问答",
+  "navigationBarTitleText": "Answer",
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#FF7F00",
-  "navigationBarTextStyle": "black"
+  "navigationBarTextStyle": "white"
 }

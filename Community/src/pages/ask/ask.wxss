@@ -1,0 +1,28 @@
+view{
+  background-color: white;
+  width: 100%;
+  display:flex;
+}
+#checkView{
+  padding: 17rpx 0rpx;
+  color: rgb(140, 132, 132);
+}
+#checkIndex{
+  background-color: rgb(240,240,240);
+  width: 716rpx;
+  margin: 0px auto;
+  border-radius: 11.7rpx;
+  line-height: 70rpx;
+  height: 70rpx;
+}
+#checkIndex>image{
+  width: 45rpx;
+  height: 45rpx;
+  margin: 20rpx 4rpx 5rpx 200rpx;
+}
+#checkIndex>input{
+  width: 65%;
+  display: inline-block;
+  height: 70rpx;
+  color: black;
+}
