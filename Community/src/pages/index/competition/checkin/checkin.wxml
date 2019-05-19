@@ -1,0 +1,19 @@
+<view id="content">
+  <view class="detail"><label>姓名</label><label>丨</label><input class='messageinput' placeholder='{{name}}' disabled='disabled'></input><label>*</label>
+  </view>
+  <view class="detail"><label>学号</label><label>丨</label><input class='messageinput' placeholder='{{userid}}' disabled='disabled'></input><label>*</label>
+  </view>
+   <view class="detail"><label>班级</label><label>丨</label><input class='messageinput' placeholder='在此处输入信息' bindinput='classroominput'></input><label>*</label>
+  </view>
+   <view class="detail"><label>联系电话</label><label>丨</label><input class='messageinput' placeholder='在此处输入信息' bindinput='phoneinput'></input><label>*</label>
+  </view>
+   <view class="detail"><label>邮箱</label><label>丨</label><input class='messageinput' placeholder='在此处输入信息' bindinput='emailinput'></input><label>*</label>
+  </view>
+    <view class="detail"><label>是否需要教材</label><label>丨</label>
+    <radio-group class="choice" bindchange="changechoice">
+    <radio class='radio' value='是'>是</radio>
+    <radio class='radio' value='否'>否</radio>
+    </radio-group>
+  </view>
+    <view class='detail'><button bindtap='submit'>提交信息</button></view>
+</view>

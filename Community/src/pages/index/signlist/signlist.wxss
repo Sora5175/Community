@@ -93,3 +93,8 @@ page{
   height: 2rem;
   padding: 0rpx 10rpx;
 }
+.uId,.name,.absenceNum,.attendenceNum{
+  display: inline-block;
+  text-align: center;
+  width: 25%;
+}

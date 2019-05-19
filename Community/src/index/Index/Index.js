@@ -69,9 +69,33 @@ Page({
 
   },
   intoSign: function () {
-    wx.navigateTo({
-      url: '../../pages/index/sign/sign/sign'
-    })
+    wx.scanCode({
+      onlyFromCamera: true,
+      //扫码成功
+      success: (res) => {
+        var result = res.result;
+        wx.request({
+          url: result + "&uId="+ app.globalData.userInfo.userId,
+          method: "GET",
+          success: function (res) {
+            //签到成功
+            if (res.data.pass || res.data.pass == 'true') {
+              //弹窗提示
+              app.showMessageDialog('签到成功！');
+            } else {
+              if (res.data.timeout || res.data.timeout == 'true') {
+                app.showMessageDialog('二维码已超时！');
+              } else {
+                app.showMessageDialog('请勿重复签到！');
+              }
+            }
+          },
+          fail: function (res) {
+            app.showMessageDialog('服务器繁忙，请稍后重试！');
+          }
+        });
+      },
+    });
   },
   intoPlan:function(){
     wx.navigateTo({

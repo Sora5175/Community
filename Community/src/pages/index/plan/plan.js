@@ -1,18 +1,79 @@
 var app = getApp()
 Page({
   data: {
-    colorArrays: ["#bbffee", "#e8ccff", "#ffff77", "#ffcccc", "#bbffee", "#e8ccff", "#ffff77", "#ffcccc"],
-    wlist: [
-      { "xqj": 1, "skjc": 1, "skcd": 2, "kcmc": "Linux操作系统@信息B404" },
-      { "xqj": 1, "skjc": 3, "skcd": 2, "kcmc": "软件测试技术@信息B404" },
-      { "xqj": 2, "skjc": 7, "skcd": 2, "kcmc": "WEB开发技术@信息B404" },
-      { "xqj": 3, "skjc": 9, "skcd": 2, "kcmc": "计算机组成与结构@经管D202" },
-      { "xqj": 3, "skjc": 1, "skcd": 2, "kcmc": "Linux操作系统@信息B404" },
-      { "xqj": 3, "skjc": 3, "skcd": 2, "kcmc": "软件测试技术@信息B404" },
-      { "xqj": 4, "skjc": 3, "skcd": 2, "kcmc": "WEB开发技术@信息B404" },
-      { "xqj": 5, "skjc": 3, "skcd": 2, "kcmc": "计算机组成与结构@经管D202" },
-    ]
+    showTip:false,
+    courseList:null,
+    name:"",
+    check:""
   },
   onLoad: function () {
+    
+  },
+  onShow:function(){
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/Community/wx-course/getCourseList.action',
+      data: {
+        uId: app.globalData.userInfo.userId,
+      },
+      success: function (res) {
+        that.setData({
+          courseList: res.data.courseList
+        });
+      }
+    })
+  },
+  nameInput: function (e) {
+    this.setData({
+      name: e.detail.value,
+    });
+  },
+  checkInput: function (e) {
+    this.setData({
+      check: e.detail.value,
+    });
+  },
+  createCourse:function(){
+    this.setData({
+      showTip: true
+    });
+  },
+  confirm:function(){
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/Community/wx-course/addCourse.action',
+      data: {
+        uId: app.globalData.userInfo.userId,
+        name: that.data.name
+      },
+      success: function (res) {
+        that.setData({
+          showTip: false
+        });
+        if (res.data.pass || res.data.pass == "true") {
+          app.showMessageDialog('添加成功');
+          that.onShow();
+        } else {
+          app.showMessageDialog('添加失败');
+          that.onShow();
+        }
+      }
+    })
+  },
+  cancel:function(){
+    this.setData({
+      showTip:false
+    });
+  },
+  intoInfo: function (event) {
+    var courseId = event.currentTarget.dataset.courseid == "undefined" ? "" : event.currentTarget.dataset.courseid;
+    wx.navigateTo({
+      url: '../courseInfo/courseInfo?courseId=' + courseId,
+    });
+  },
+  checkCourse:function(){
+    wx.navigateTo({
+      url: '../checkedcourse/checkedcourse?check='+this.data.check,
+    })
   }
 })

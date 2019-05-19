@@ -1,0 +1,8 @@
+<view class="body">
+  <view class="content">
+  <view class="course"><view class='uId'>学号</view><view class='name'>姓名</view><view class='absenceNum'>缺勤数</view><view class='attendenceNum'>出勤数</view></view>
+    <block wx:for="{{courseUserList}}" wx:key="item">
+      <view class="course" bindtap="intoInfo"  hover-class='view_hover'  data-courseid="{{item.courseId}}"><view class='uId'>{{userInfoList[index].userId}}</view><view class='name'>{{userInfoList[index].name}}</view><view class='absenceNum'>{{item.absenceNum}}</view><view class='attendenceNum'>{{item.attendanceNum}}</view></view>
+    </block>
+  </view>
+</view>

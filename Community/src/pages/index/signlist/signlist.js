@@ -1,18 +1,22 @@
-var app = getApp();
+// Community/src/pages/index/signlist/signlist.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    courseId:null,
+    courseUserList: [],
+    userInfoList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      courseId:options.courseId
+    })
   },
 
   /**
@@ -26,7 +30,19 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8080/Community/wx-course/getSignList.action',
+      data: {
+        courseId:that.data.courseId
+      },
+      success: function (res) {
+        that.setData({
+          courseUserList:res.data.courseUserList,
+          userInfoList:res.data.userInfoList
+        });
+      }
+    });
   },
 
   /**
@@ -62,8 +78,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  cameraSign:function(){
-    //扫码
   }
-});
+})

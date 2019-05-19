@@ -2,10 +2,9 @@
   <view class="check"><input type='text' placeholder='请输入课程名称' bindinput='checkInput'></input><button class="checkAction" bindtap='checkCourse' size="mini">搜索</button></view>
 </view>
 <view class="body">
-  <view class="top"><view class="title">我管理的课程</view><button class="addCourse" size="mini" bindtap="createCourse">+</button></view>
   <view class="content">
     <block wx:for="{{courseList}}" wx:key="item">
-      <view class="course" bindtap="intoInfo"  hover-class='view_hover'  data-courseid="{{item.courseId}}">{{item.name}}</view>
+      <view class="course" bindtap="intoInfo"  hover-class='view_hover'  data-courseid="{{item.courseId}}"><view>课程名称：{{item.name}}</view><view>教师：{{nameList[index]}}</view></view>
     </block>
   </view>
 </view>

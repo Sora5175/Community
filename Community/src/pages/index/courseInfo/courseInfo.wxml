@@ -1,0 +1,14 @@
+<view class="header" wx:if="{{isMine}}">
+    <button class="startSign" wx:if="{{!inSign}}" bindtap='startSign'>发起签到</button>
+    <button class="signing" disabled='true' wx:else>签到中</button>
+</view>
+<view class="body">
+  <view class="name"><text decode="{{true}}">课程名称：</text><text class='right'>{{course.name}}</text></view>
+  <view class="teacher"><text decode="{{true}}">老&emsp;&emsp;师：</text><text class='right'>{{name}}</text></view>
+  <view class="students" bindtap="intoSignList" hover-class='view_hover'><text decode="{{true}}">签到情况</text><text class="right">></text></view>
+  <view class="qrCode" wx:if="{{inSign}}"><image src='http://localhost:8080/Community/wx-course/qrCode.action?courseId={{courseId}}'></image></view>
+</view>
+<view class="footer">
+  <button class="endCourse" bindtap="endCourse" wx:if="{{isMine}}">结束课程</button>
+  <button class="joinCourse" bindtap="joinCourse" wx:else>加入课程</button>
+</view>

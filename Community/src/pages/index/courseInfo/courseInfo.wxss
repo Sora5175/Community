@@ -1,0 +1,39 @@
+page{
+  background-color: rgb(240, 240, 240);
+}
+.header{
+  margin: 30rpx;
+}
+.startSign{
+  background-color: green;
+  color: white;
+}
+.body{
+  background-color: white;
+}
+.body view{
+  border-bottom: 1rpx solid rgb(230, 230, 230);
+  line-height: 90rpx;
+  padding: 0rpx 20rpx;
+}
+.right{
+  float: right;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0rpx 40rpx;
+}
+.endCourse{
+  background-color:red;
+  color: white; 
+}
+.qrCode{
+  text-align: center;
+  padding: 30rpx !important;
+}
+.view_hover{
+  background-color: rgb(230, 230, 230);
+}

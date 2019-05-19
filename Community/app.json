@@ -7,7 +7,6 @@
     "src/index/Mine/Mine",
     "register/register",
     "src/pages/index/sign/sign/sign",
-    "src/pages/index/plan/plan",
     "src/pages/index/activity/activity",
     "src/pages/index/sign/signCode/signCode",
     "src/pages/index/competition/competition",
@@ -39,7 +38,12 @@
     "src/pages/ask/ask",
     "src/pages/ansq/ansq",
     "src/pages/question/question",
-    "src/pages/answer/answer"
+    "src/pages/answer/answer",
+    "src/pages/index/competition/checkin/checkin",
+    "src/pages/index/courseInfo/courseInfo",
+    "src/pages/index/plan/plan",
+    "src/pages/index/checkedcourse/checkedcourse",
+    "src/pages/index/signlist/signlist"
   ],
   "window": {
     "backgroundTextStyle": "light"
@@ -81,5 +85,6 @@
         "text": "我的"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
