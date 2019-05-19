@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="wx-course" namespace="/wx-course" extends="json-default">
+		<action name="addCourse" class="action.wxcourseAction.AddCourseAction">
+			<result type="json">
+				<param name="includeProperties">pass</param>
+			</result>
+		</action>
+		<action name="getCourseList" class="action.wxcourseAction.GetCourseListAction">
+			<result type="json">
+				<param name="includeProperties">courseList.*</param>
+			</result>
+		</action>
+		<action name="getCheckedCourseList" class="action.wxcourseAction.GetCheckedCourseListAction">
+			<result type="json">
+				<param name="includeProperties">courseList.*,nameList.*</param>
+			</result>
+		</action>
+		<action name="getCourse" class="action.wxcourseAction.GetCourseAction">
+			<result type="json">
+				<param name="includeProperties">course.*,inSign,name</param>
+			</result>
+		</action>
+		<action name="endCourse" class="action.wxcourseAction.EndCourseAction">
+			<result type="json">
+				<param name="includeProperties">pass</param>
+			</result>
+		</action>
+		<action name="joinCourse" class="action.wxcourseAction.JoinCourseAction">
+			<result name="success" type="json">
+				<param name="includeProperties">pass</param>
+			</result>
+		</action>
+		<action name="qrCode" class="action.wxcourseAction.QrCodeAction">
+			<result name="success" type="stream">
+				<param name="inputName">ins</param>
+			</result>
+		</action>
+		<action name="sign" class="action.wxcourseAction.SignAction">
+			<result name="success" type="json">
+				<param name="includeProperties">pass,timeout</param>
+			</result>
+		</action>
+		<action name="startSign" class="action.wxcourseAction.StartSignAction">
+			<result name="success" type="json">
+				<param name="includeProperties">pass</param>
+			</result>
+		</action>
+		<action name="getSignList" class="action.wxcourseAction.GetSignListAction">
+			<result name="success" type="json">
+				<param name="includeProperties">userInfoList.*,courseUserList.*</param>
+			</result>
+		</action>
+	</package>
+</struts>

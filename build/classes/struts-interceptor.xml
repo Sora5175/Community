@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 拦截器 -->
+	<package name="java.interceptor" namespace="/java.interceptor" extends="json-default">
+		<interceptors>
+			<!-- 登录拦截 -->
+			<interceptor name="login" class="java.interceptor.LoginInterceptor"></interceptor>
+			<!-- 定义拦截器栈 -->
+			<interceptor-stack name="myStack">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="login"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- 修改默认拦截器 -->
+		<default-interceptor-ref name="myStack"></default-interceptor-ref>
+		<!-- 定义全局result -->
+		<global-results>
+			<result name="java.interceptor" type="redirectAction">
+				<param name="namespace">/login</param>
+				<param name="actionName">loginframe</param>
+			</result>
+		</global-results>
+	</package>
+</struts>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="wx-lostfound" namespace="/wx-lf" extends="json-default">
+		<action name="lostonload" class="action.wxlostfoundAction.LostOnloadAction">
+			<result name="success" type="json">
+				<param name="includeProperties">list.*,isMore</param>
+			</result>
+		</action>
+		
+		<action name="lostcontentonload" class="action.wxlostfoundAction.LostContentOnloadAction">
+			<result name="success" type="json">
+				<param name="includeProperties">map.*</param>
+			</result>
+		</action>
+		
+		<action name="loconload" class="action.wxlostfoundAction.LocationOnloadAction">
+			<result name="success" type="json">
+				<param name="includeProperties">list.*</param>
+			</result>
+		</action>
+		
+		<action name="ensurelostonload" class="action.wxlostfoundAction.EnsureLostOnloadAction">
+			<result name="success" type="json">
+				<param name="includeProperties">list.*</param>
+			</result>
+		</action>
+		
+		<action name="ensurefoundonload" class="action.wxlostfoundAction.EnsureFoundOnloadAction">
+			<result name="success" type="json">
+				<param name="includeProperties">list.*</param>
+			</result>
+		</action>
+		
+		<action name="deleteofconfirm" class="action.wxlostfoundAction.DeleteOfConfirmAction">
+			<result name="success" type="json">
+				<param name="includeProperties">flag</param>
+			</result>
+		</action>
+		
+		<action name="deleteoffoundconfirm" class="action.wxlostfoundAction.DeleteOfFoundConfirmAction">
+			<result name="success" type="json">
+				<param name="includeProperties">flag</param>
+			</result>
+		</action>
+		
+		<action name="deleteofdel" class="action.wxlostfoundAction.DeleteOfDelAction">
+			<result name="success" type="json">
+				<param name="includeProperties">flag</param>
+			</result>
+		</action>
+		
+		<action name="deleteoffounddel" class="action.wxlostfoundAction.DeleteOfFoundDelAction">
+			<result name="success" type="json">
+				<param name="includeProperties">flag</param>
+			</result>
+		</action>
+		
+		<action name="foundonload" class="action.wxlostfoundAction.FoundOnloadAction">
+			<result name="success" type="json">
+				<param name="includeProperties">list.*,isMore</param>
+			</result>
+		</action>
+		
+		<action name="foundcontentonload" class="action.wxlostfoundAction.FoundContentOnloadAction">
+			<result name="success" type="json">
+				<param name="includeProperties">map.*</param>
+			</result>
+		</action>
+		
+		<action name="foundcontentonload" class="action.wxlostfoundAction.FoundContentOnloadAction">
+			<result name="success" type="json">
+				<param name="includeProperties">map.*</param>
+			</result>
+		</action>
+		
+		<action name="lostuploadwithoutpic" class="action.wxlostfoundAction.LostUploadWithoutPicAction">
+			<result name="success" type="json">
+				<param name="includeProperties">confirm</param>
+			</result>
+		</action>
+		
+		<action name="getlostuploadwithoutpic" class="action.wxlostfoundAction.getLostUploadWithoutPicAction">
+			<result name="success" type="json">
+				<param name="includeProperties">confirm</param>
+			</result>
+		</action>
+		
+		
+		<!-- 上传相关 -->
+		<action name="lostupload" class="action.wxlostfoundAction.LostUploadAction">
+			<interceptor-ref name="defaultStack">
+                <param name="fileUpload.maximumSize">500000000</param>
+                <param name="fileUpload.allowedExtensions">.png,.jpg,.gif,.bmp</param>
+            </interceptor-ref>
+            <result name="success" type="json">
+				<param name="includeProperties">pass,errormsg</param>
+			</result>
+		</action>
+		
+		<action name="foundupload" class="action.wxlostfoundAction.FoundUploadAction">
+			<interceptor-ref name="defaultStack">
+                <param name="fileUpload.maximumSize">500000000</param>
+                <param name="fileUpload.allowedExtensions">.png,.jpg,.gif,.bmp</param>
+            </interceptor-ref>
+            <result name="success" type="json">
+				<param name="includeProperties">pass,errormsg</param>
+			</result>
+		</action>
+		
+		<action name="getlostupload" class="action.wxlostfoundAction.getLostUploadAction">
+			<interceptor-ref name="defaultStack">
+                <param name="fileUpload.maximumSize">500000000</param>
+                <param name="fileUpload.allowedExtensions">.png,.jpg,.gif,.bmp</param>
+            </interceptor-ref>
+            <result name="success" type="json">
+				<param name="includeProperties">pass,errormsg</param>
+			</result>
+		</action>
+		
+		<action name="returnupload" class="action.wxlostfoundAction.ReturnUploadAction">
+			<interceptor-ref name="defaultStack">
+                <param name="fileUpload.maximumSize">500000000</param>
+                <param name="fileUpload.allowedExtensions">.png,.jpg,.gif,.bmp</param>
+            </interceptor-ref>
+            <result name="success" type="json">
+				<param name="includeProperties">pass,errormsg</param>
+			</result>
+		</action>
+	</package>
+	
+	<!-- <package name="lf-upload" namespace="/wx-lf-upload" extends="struts-default">
+		<action name="lostupload" class="action.wxlostfoundAction.LostUploadAction">
+			<interceptor-ref name="defaultStack">
+                <param name="fileUpload.maximumSize">500000000</param>
+                <param name="fileUpload.allowedExtensions">.png,.jpg,.gif,.bmp</param>
+            </interceptor-ref>
+		</action>
+		
+		<action name="foundupload" class="action.wxlostfoundAction.FoundUploadAction">
+			<interceptor-ref name="defaultStack">
+                <param name="fileUpload.maximumSize">500000000</param>
+                <param name="fileUpload.allowedExtensions">.png,.jpg,.gif,.bmp</param>
+            </interceptor-ref>
+		</action>
+		
+		<action name="returnupload" class="action.wxlostfoundAction.ReturnUploadAction">
+			<interceptor-ref name="defaultStack">
+                <param name="fileUpload.maximumSize">500000000</param>
+                <param name="fileUpload.allowedExtensions">.png,.jpg,.gif,.bmp</param>
+            </interceptor-ref>
+		</action>
+		
+		<action name="getlostupload" class="action.wxlostfoundAction.getLostUploadAction">
+			<interceptor-ref name="defaultStack">
+                <param name="fileUpload.maximumSize">500000000</param>
+                <param name="fileUpload.allowedExtensions">.png,.jpg,.gif,.bmp</param>
+            </interceptor-ref>
+		</action>
+	</package> -->
+</struts>
